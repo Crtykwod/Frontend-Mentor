@@ -64,5 +64,5 @@ I still have a lot to learn about flexbox, because it took me too much time in t
 
 ## Author
 
-- Github - [Crtykwod](https://github.com/Crtykwod) (still empty :v)
+- Github - [Crtykwod](https://github.com/Crtykwod)
 - Frontend Mentor - [@Crtykwod](https://www.frontendmentor.io/profile/Crtykwod)
