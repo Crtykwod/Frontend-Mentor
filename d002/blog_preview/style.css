@@ -1,0 +1,103 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+:root {
+    /* Colors: */
+    --Yellow:   hsl(47, 88%, 63%);
+    --White:    hsl(0, 0%, 100%);
+    --Gray-500: hsl(0, 0%, 42%);
+    --Gray-950: hsl(0, 0%, 7%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 97.5vh;
+    font-family: Figtree, sans-serif;
+    background-color: var(--Yellow);
+}
+
+main {
+    background-color: var(--White);
+    display: grid;
+    flex: 0 1 auto;
+    /* Positioning Config: */
+    margin: auto;
+    padding: 24px;
+    width: 327px;
+    /* Border Config: */
+    border: 1px solid black;
+    border-radius: 20px;
+    box-shadow: 8px 8px black;
+}
+
+p {
+    margin: 12px 0;
+}
+
+img#abstract {
+    width: 100%;
+    border-radius: 10px;
+}
+
+#info {
+    font-size: 14px;
+    color: var(--Gray-950);
+}
+
+#info div {
+    background-color: var(--Yellow);
+    font-weight: bold;
+    border-radius: 4px;
+    /* Positioning Config */
+    width: fit-content;
+    padding: 4px 12px;
+    margin-top: 24px;
+}
+
+#mainContent {
+    margin: 12px 0;
+    color: var(--Gray-500);
+    font-weight: 500;
+}
+
+#mainContent h1 {
+    color: var(--Gray-950);
+    font-weight: 900;
+    transition: 200ms ease-out;
+}
+
+#mainContent h1:hover {
+    color: var(--Yellow);
+    /* Gave this small shadow to improve readability */
+    text-shadow: 1px 1px #00000070;
+}
+
+#credits {
+    /* Positioning Config: */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 0 0;
+    /* Font Config: */
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#credits img {
+    height: 32px;
+}
+
+
+footer {
+    flex-shrink: 0;
+    height: 10px;
+}
