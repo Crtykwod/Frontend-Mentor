@@ -23,11 +23,11 @@ Users should be able to:
 
 ### Screenshot
 
-![Project Screenshot](./screenshot.jpg)
+![Project Screenshot](./screenshot.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/blog-preview-card-with-custom-hover-and-focus-BikyKCHNq0](https://www.frontendmentor.io/solutions/blog-preview-card-with-custom-hover-and-focus-BikyKCHNq0)
 - Live Site URL: [https://crtykwod.github.io/Frontend-Mentor/d002/blog_preview/](https://crtykwod.github.io/Frontend-Mentor/d002/blog_preview/)
 
 ## My process
