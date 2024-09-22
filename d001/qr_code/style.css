@@ -3,63 +3,63 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 
 :root {
-	/* Cores: */
-	--Branco: #fff;
-	--Slate-300: hsl(212, 45%, 89%);
-	--Slate-500: hsl(216, 15%, 48%);
-	--Slate-900: hsl(218, 44%, 22%);
+  /* Cores: */
+  --Branco: #fff;
+  --Slate-300: hsl(212, 45%, 89%);
+  --Slate-500: hsl(216, 15%, 48%);
+  --Slate-900: hsl(218, 44%, 22%);
 }
 
 * {
-	font-family: Outfit, sans-serif;
+  font-family: Outfit, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-	margin: 0;
-	background-color: var(--Slate-300);
-	display: flex;
-	flex-direction: column;
-	height: 100vh;
+  margin: 0;
+  background-color: var(--Slate-300);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
 .back {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex: 1 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1 0 auto;
 }
 
 .main {
-    width: 300px;
-    background-color: var(--Branco);
-    padding: 15px;
-    border-radius: 20px;
-    text-align: center;
-    box-shadow: 4px 4px 7px 0px #00000029;
+  width: 300px;
+  background-color: var(--Branco);
+  padding: 15px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 4px 4px 7px 0px #00000029;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 img {
-	width: 100%;
-	object-fit: contain;
-	border-radius: 10px;
-}
-
-h1,
-p {
-	margin: 20px 8px;
+  width: 100%;
+  object-fit: contain;
+  border-radius: 10px;
 }
 
 h1 {
-	font-size: 1.5em;
-	color: var(--Slate-900);
+  font-size: 1.5em;
+  color: var(--Slate-900);
 }
 
 p {
-	font-size: 1em;
-	color: var(--Slate-500);
+  font-size: 1em;
+  color: var(--Slate-500);
 }
 
 footer {
-	height: 25px;
-	flex-shrink: 0;
+  height: 25px;
+  flex-shrink: 0;
 }
