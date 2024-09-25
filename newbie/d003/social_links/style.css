@@ -187,23 +187,21 @@ main {
     list-style: none;
 
     a {
+      display: block;
       text-decoration: none;
-    
-      .social-media__link {
-        border-radius: var(--100);
-        padding: var(--150);
-        background: var(--Grey-700);
-        transition: 450ms ease-out;
-        font-weight: bold;
-
-        &:hover {
-          background-color: var(--Green);
-          color: var(--Grey-700);
-        }
+      border-radius: var(--100);
+      padding: var(--150);
+      background: var(--Grey-700);
+      transition: 450ms ease-out;
+      font-weight: bold;
+      
+      &:hover {
+        background-color: var(--Green);
+        color: var(--Grey-700);
       }
     }
-  }  
-}
+  }
+}  
 
 .attribution {
   font-size: 0.65rem;
