@@ -157,11 +157,11 @@ main {
     row-gap: var(--50);
     font-weight: bold;
 
-    h1 {
+    .name {
       font-size: 1.5rem;
     }
 
-    p {
+    .location {
       color: var(--Green);
     }
   }
@@ -178,40 +178,48 @@ main {
 }
 
 .social-media {
-  display: grid;
-  row-gap: var(--200);
 
-  a {
-    text-decoration: none;
-  
-    .social-media__link {
-      border-radius: var(--100);
-      padding: var(--150);
-      background: var(--Grey-700);
-      transition: 450ms ease-out;
-      font-weight: bold;
+  .social-media__list {
+    display: grid;
+    row-gap: var(--200);
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    a {
+      text-decoration: none;
+    
+      .social-media__link {
+        border-radius: var(--100);
+        padding: var(--150);
+        background: var(--Grey-700);
+        transition: 450ms ease-out;
+        font-weight: bold;
+
+        &:hover {
+          background-color: var(--Green);
+          color: var(--Grey-700);
+        }
+      }
     }
-  }
-
-  .social-media__link:hover {
-    background-color: var(--Green);
-    color: var(--Grey-700);
-  }
+  }  
 }
 
 .attribution {
   font-size: 0.65rem;
   letter-spacing: 0.03rem;
   text-align: center;
-}
-.attribution a {
-  text-decoration: none;
-  color: var(--Green);
-  transition: 150ms linear;
-  &:hover {
-    font-weight: bold;
-    padding: 2px 3px;
-    border-radius: 4px;
-    background: var(--Grey-700);
+
+  a {
+    text-decoration: none;
+    color: var(--Green);
+    transition: 150ms linear;
+  
+    &:hover {
+      font-weight: bold;
+      padding: 2px 3px;
+      border-radius: 4px;
+      background: var(--Grey-700);
+    }
   }
 }
