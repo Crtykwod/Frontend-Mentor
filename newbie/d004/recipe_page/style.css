@@ -188,6 +188,12 @@ h1 {
   color: var(--Stone-900);
 }
 
+@media only screen and (min-width: 420px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+}
+
 article {
   display: grid;
   row-gap: var(--24px);

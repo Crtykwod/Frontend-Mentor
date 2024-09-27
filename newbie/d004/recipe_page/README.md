@@ -20,8 +20,8 @@ This is a solution to the [Recipe page challenge on Frontend Mentor](https://www
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/recipe-page-with-semantic-html-TsACjTwki0](https://www.frontendmentor.io/solutions/recipe-page-with-semantic-html-TsACjTwki0)
+- Live Site URL: [https://crtykwod.github.io/Frontend-Mentor/newbie/d004/recipe_page](https://crtykwod.github.io/Frontend-Mentor/newbie/d004/recipe_page)
 
 ## My process
 
