@@ -1,0 +1,280 @@
+/* CSS Reset: */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+/* CSS Reset END */
+
+@font-face {
+  font-family: "Outfit";
+  src: url(assets/fonts/Outfit-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: "Young Serif";
+  src: url(assets/fonts/YoungSerif-Regular.ttf);
+}
+
+
+:root {
+  /* Colors: */
+  --White: hsl(0, 0%, 100%);
+
+  --Stone-100: hsl(30, 54%, 90%);
+  --Stone-150: hsl(30, 18%, 87%);
+  --Stone-600: hsl(30, 10%, 34%);
+  --Stone-900: hsl(24, 5%, 18%);
+
+  --Brown-800: hsl(14, 45%, 36%);
+
+  --Rose-800: hsl(332, 51%, 32%);
+  --Rose-50: hsl(330, 100%, 98%);
+
+  /* Typography: */
+  --Text-Preset-1: 2.25rem "Young Serif", serif;
+  --Text-Preset-2: 1.75rem "Young Serif", serif;
+  --Text-Preset-3: 600 1.25rem "Outfit", sans-serif; 
+  --Text-Preset-4: 1rem/1.5 "Outfit", sans-serif; /* Default */
+  --Text-Preset-4_bold: bold 1rem/1.5 "Outfit", sans-serif;
+
+  /* Spacing: */
+  --8px: 0.5rem;
+  --12px: 0.75rem;
+  --16px: 1rem;
+  --24px: 1.5rem;
+  --32px: 2rem;
+  --40px: 2.5rem;
+  --48px: 3rem;
+  --128px: 8rem;
+}
+
+body {
+  background-color: var(--Stone-100);
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr .25em;
+}
+
+@media only screen and (min-width: 420px) {
+  body {
+    padding: 56px;
+  }
+}
+
+main {
+  background-color: var(--White);
+  font: var(--Text-Preset-4);
+  color: var(--Stone-600);
+  padding: clamp(var(--32px), 1.6379rem + 1.3793vw, var(--40px));
+  max-width: 46rem;
+  margin: auto;
+  border-radius: 24px;
+  display: grid;
+  row-gap: var(--32px);
+}
+
+header {
+  margin: calc(var(--40px) * -1);
+  margin-bottom: 0;
+  display: grid;
+  row-gap: var(--40px);
+  div {
+    margin: 0 var(--40px);
+    display: grid;
+    row-gap: var(--24px);
+  }
+}
+
+@media only screen and (min-width: 420px) {
+  header, header div {
+    margin: 0;
+  }
+}
+img {
+  border-radius: 12px;
+}
+
+h1 {
+  font: var(--Text-Preset-1);
+  color: var(--Stone-900);
+}
+
+article {
+  display: grid;
+  row-gap: var(--24px);
+}
+  
+.prep-time {
+  background-color: var(--Rose-50);
+  padding: var(--24px);
+  border-radius: 12px;
+  display: grid;
+  row-gap: var(--16px);
+  
+  h2 {
+    font: var(--Text-Preset-3);
+    color: var(--Rose-800);
+  }
+
+  li::marker {
+    color: var(--Rose-800);
+  }
+}
+
+h2 {
+  font: var(--Text-Preset-2);
+  color: var(--Brown-800);
+}
+
+ul, ol {
+  display: grid;
+  row-gap: var(--8px);
+  padding-left: 16px;
+  margin: 0;
+}
+
+li {
+  list-style-position: outside;
+  padding-left: 1rem;
+
+  &::marker {
+    font: var(--Text-Preset-4_bold);
+    color: var(--Brown-800);
+  }
+}
+
+.nutritional-table {
+  display: grid;
+  grid-auto-rows: auto;
+}
+
+.table-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: var(--16px);
+  padding: var(--12px) 0;
+  border-bottom: 1px solid var(--Stone-100);
+
+  &:last-of-type {
+    border-bottom: 0;
+  }
+}
+
+.table-number {
+  font: var(--Text-Preset-4_bold);
+  color: var(--Brown-800);
+}
+
+.attribution { 
+  font: var(--Text-Preset-4);
+  font-size: 11px; 
+  text-align: center;
+  padding: 2rem; 
+}
+
+.attribution a { 
+  color: var(--Rose-800);
+  text-decoration: none;
+  transition: 150ms ease;
+  border-radius: 4px;
+
+  &:hover{
+    font-weight: 600;
+    padding: .25rem;
+    background-color: var(--Rose-50);
+  } 
+}
+
+.line {
+  background: var(--Stone-100);
+  height: 1px;
+}
