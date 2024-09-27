@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/responsive-product-preview-card-using-media-queries-gN1IBRuHjh](https://www.frontendmentor.io/solutions/responsive-product-preview-card-using-media-queries-gN1IBRuHjh)
+- Live Site URL: [https://crtykwod.github.io/Frontend-Mentor/newbie/d005/product_preview/](https://crtykwod.github.io/Frontend-Mentor/newbie/d005/product_preview/)
 
 ## My process
 
