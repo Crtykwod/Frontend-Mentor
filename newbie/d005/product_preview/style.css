@@ -240,10 +240,11 @@ main {
 
   .info {
     grid-area: info;
-    padding: 1.5rem;
+    padding: 2rem 2rem 0;
   }
 
   .buy {
     grid-area: price;
+    padding: 0 2rem 2rem;
   }
 }
