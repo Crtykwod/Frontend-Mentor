@@ -144,22 +144,21 @@ body {
   grid-template-rows: 1fr .25em;
 }
 
-@media only screen and (min-width: 420px) {
-  body {
-    padding: 56px;
-  }
-}
-
 main {
   background-color: var(--White);
   font: var(--Text-Preset-4);
   color: var(--Stone-600);
   padding: clamp(var(--32px), 1.6379rem + 1.3793vw, var(--40px));
   max-width: 46rem;
-  margin: auto;
   border-radius: 24px;
   display: grid;
   row-gap: var(--32px);
+}
+
+@media only screen and (min-width: 420px) {
+  main {
+    margin: var(--128px) auto;
+  }
 }
 
 header {
