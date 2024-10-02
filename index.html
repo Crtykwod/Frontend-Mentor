@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/output.css" />
+    <title>Frontend Mentor - Index</title>
+  </head>
+  <body class="bg-body">
+    <header
+      class="flex justify-between sm:flex-col w-screen gap-4 px-8 pt-4 bg-violet-600 md:pl-[10%] xl:pl-[20%]">
+      <div class="text-2xl font-bold text-white">
+        <h1>Carlos Samuel</h1>
+        <h2 class="text-xl">write("Olá, Mundo!");</h2>
+      </div>
+      <nav class="self-end sm:self-start">
+        <div class="sm:hidden pb-1">
+          <svg
+            id="navButton"
+            onclick="openNav()"
+            class="hover:cursor-pointer"
+            fill="#fff"
+            version="1.1"
+            id="Capa_1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            width="1.50rem"
+            height="1.50rem"
+            viewBox="0 0 124 124"
+            xml:space="preserve">
+            <g>
+              <path
+                d="M112,6H12C5.4,6,0,11.4,0,18s5.4,12,12,12h100c6.6,0,12-5.4,12-12S118.6,6,112,6z" />
+              <path
+                d="M112,50H12C5.4,50,0,55.4,0,62c0,6.6,5.4,12,12,12h100c6.6,0,12-5.4,12-12C124,55.4,118.6,50,112,50z" />
+              <path
+                d="M112,94H12c-6.6,0-12,5.4-12,12s5.4,12,12,12h100c6.6,0,12-5.4,12-12S118.6,94,112,94z" />
+            </g>
+          </svg>
+          <ul
+            id="navList"
+            class="absolute hidden bg-violet-600 rounded-md p-2 flex-col text-end right-0 flex gap-1 font-semibold text-violet-50 pt-1.5">
+            <li class="nav-list"><a href="#">Main-Page</a></li>
+            <li class="nav-list active"><a href="#">Frontend-Mentor</a></li>
+            <li class="nav-list"><a href="#">Studies-Folder</a></li>
+          </ul>
+        </div>
+        <ul
+          class="hidden sm:flex flex-wrap gap-4 font-semibold text-violet-50 pt-1.5">
+          <li class="nav-list"><a href="#">Main-Page</a></li>
+          <li class="nav-list active">
+            <a href="#">Frontend-Mentor</a>
+          </li>
+          <li class="nav-list"><a href="#">Studies-Folder</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main
+      class="grid gap-4 p-5 m-auto bg-white md:w-4/5 xl:w-3/5 rounded-b-2xl">
+      <section>
+        <div class="pt-5 text-4xl text-center pb-14 font-semibold">
+          <h1 class="">Frontend Mentor - Desafios</h1>
+          <p class="text-lg english">Frontend Mentor - Challenges</p>
+        </div>
+        <div class="text-[1.1rem] pb-4">
+          <p>&lt;p&gt; Oi, tudo bem? &lt;/p&gt;</p>
+          <p class="english">
+            &lt;p class="english"&gt; Hey, what's up? &lt;/p&gt;
+          </p>
+        </div>
+        <p>
+          Aqui você encontrará todo meu avanço nos desafios do
+          <a class="link" href="https://frontendmentor.io/profile/Crtykwod"
+            >Frontend Mentor</a
+          >, explicados e separados por dificuldade:
+        </p>
+        <p class="english">
+          Here you will find all my advancement in the Frontend Mentor's
+          challenges, explained and separated by difficulty:
+        </p>
+      </section>
+
+      <section class="grid gap-4">
+        <details class="challenge">
+          <summary>#1 - Newbie -- 6 challenges completed</summary>
+          <ul class="grid gap-6">
+            <li>
+              <h3>
+                <a
+                  class="link-challenge"
+                  href="https://crtykwod.github.io/Frontend-Mentor/newbie/d001/qr_code/"
+                  target="_blank"
+                  rel="external"
+                  >QR Code Challenge</a
+                >
+              </h3>
+              <img
+                src="/newbie/d001/qr_code/images/screenshot.png"
+                alt="first newbie project screenshot. There's a card in the center with a QR Code and some text in it." />
+              <p>
+                Esse desafio consistiu em criar um card simples e colocar uma
+                imagem de QR Code dentro dele, foi um exercício introdutório que
+                me ajudou a entender melhor alguns conceitos de
+                <code>display: flex;</code>
+              </p>
+              <p class="english">
+                This challenge consisted of creating a simple card and placing a
+                QR Code image inside it. It was an introductory exercise that
+                helped me better understand some concepts of
+                <code>display: flex;</code>
+              </p>
+              <p>
+                <a
+                  class="frontend-redirect"
+                  href="https://www.frontendmentor.io/solutions/responsive-page-with-css-flexbox-H2K-AH208v"
+                  target="_blank"
+                  rel="external">
+                  Click Here</a
+                >
+                to see the solution on Frontend Mentor
+              </p>
+            </li>
+
+            <li>
+              <h3>
+                <a
+                  class="link-challenge"
+                  href="https://crtykwod.github.io/Frontend-Mentor/newbie/d002/blog_preview"
+                  target="_blank"
+                  rel="external"
+                  >Blog Preview Challenge</a
+                >
+              </h3>
+              <img
+                src="/newbie/d002/blog_preview/screenshot.png"
+                alt="Second newbie challenge screenshot. There's a card in the center, there's an image on top of the card and text below it" />
+              <p>
+                Esse desafio foi basicamente o mesmo do anterior, a diferença é
+                que nesse eu deveria mudar a cor do título quando passase com o
+                mouse sobre ele, para isso usei <code>:hover</code>. Aproveitei
+                e aprendi um pouco mais sobre <code>display: grid;</code>, tanto
+                que foi isso que usei para centralizar o card.
+              </p>
+              <p class="english">
+                This challenge was basically the same as the previous one, the
+                difference is that in this one I had to change the color of the
+                title when I hovered over it with the mouse, for that I used
+                <code>:hover</code>. Also, I took some time and learned a bit
+                more about <code>display: grid;</code>, so that's what I used to
+                center the card.
+              </p>
+              <p>
+                <a
+                  class="frontend-redirect"
+                  href="https://www.frontendmentor.io/solutions/blog-preview-card-with-custom-hover-and-focus-BikyKCHNq0"
+                  >Click Here</a
+                >
+                to see the solution on Frontend Mentor
+              </p>
+            </li>
+
+            <li>
+              <h3>
+                <a
+                  class="link-challenge"
+                  href="https://crtykwod.github.io/Frontend-Mentor/newbie/d003/social_links"
+                  target="_blank"
+                  rel="external"
+                  >Social Links Profile Challenge</a
+                >
+              </h3>
+              <img
+                src="/newbie/d003/social_links/assets/images/screenshot.png"
+                alt="Third Newbie Challenge screenshot. It shows a card with a profile picture and social media links" />
+              <p>
+                Nesse desafio, eu precisei precisar inserir uma foto redonda,
+                para isso usei <code>border-radius: 50%;</code> e funcionou
+                perfeitamente. Também precisei colocar minhas redes sociais
+                dentro de caixas que alteravam a cor quando eu passava o mouse
+                em cima.
+              </p>
+              <p class="english">
+                In this challenge, i needed to insert a rounded image, to do it,
+                I used <code>border-radius: 50%;</code> and it worked perfectly.
+                I also needed to place my social media inside boxes that change
+                the color when you hover the mouse over it.
+              </p>
+              <p>
+                <a
+                  href="https://www.frontendmentor.io/solutions/responsive-social-media-index-with-css-grid-Edads_cGLH"
+                  target="_blank"
+                  rel="external"
+                  class="frontend-redirect"
+                  >Click here</a
+                >
+                to see the solution on Frontend Mentor
+              </p>
+            </li>
+
+            <li>
+              <h3>
+                <a
+                  class="link-challenge"
+                  href="https://crtykwod.github.io/Frontend-Mentor/newbie/d004/recipe_page"
+                  target="_blank"
+                  rel="external"
+                  >Recipe Page Challenge</a
+                >
+              </h3>
+              <img
+                src="./newbie/d004/recipe_page/assets/images/screenshot.png"
+                alt="Fourth Newbie Challenge screenshot. The screenshot presents an internet recipe page of an Omelette" />
+              <p>
+                Aqui, eu precisei usar <code>@media</code> para definir um
+                layout diferente para tamanhos diferentes de dispositivos, além
+                disso, o desafio focou bastante nas tags semânticas de HTML,
+                como <code>&lt;header&gt;</code> <code>&lt;main&gt</code> e
+                <code>&lt;footer&gt;</code>
+              </p>
+              <p class="english">
+                Here, I needed to use <code>@media</code> to define a different
+                layout for different device sizes, in addition, the challenge
+                focused a lot on semantic HTML tags, such as
+                <code>&lt;header&gt;</code> <code>&lt;main&gt</code> and
+                <code>&lt;footer&gt;</code>
+              </p>
+              <p>
+                <a
+                  href="https://www.frontendmentor.io/solutions/recipe-page-with-semantic-html-TsACjTwki0"
+                  class="frontend-redirect"
+                  target="_blank"
+                  rel="external"
+                  >Click Here</a
+                >
+                to see the solution on Frontend Mentor
+              </p>
+            </li>
+
+            <li>
+              <h3>
+                <a
+                  class="link-challenge"
+                  href="https://crtykwod.github.io/Frontend-Mentor/newbie/d005/product_preview"
+                  target="_blank"
+                  rel="external"
+                  >Product Preview Challenge</a
+                >
+              </h3>
+              <img
+                src="./newbie/d005/product_preview/images/screenshot.png"
+                alt="Fifth Newbie Challenge screenshot. The picture shows a card that mocks a perfume store" />
+              <p>Esse desafio se baseou em <code>@media</code>. O objetivo era criar dois cards, um para versão mobile e outro para desktop, para isso usei a aproximação mobile-first.</p>
+              <p class="english">This challenge was based on <code>@media</code>. The objective was to create two cards, one for the mobile version and the other for the desktop, for this I used the mobile-first approach.</p>
+              <p>
+                <a
+                  class="frontend-redirect"
+                  href="https://www.frontendmentor.io/solutions/responsive-product-preview-card-using-media-queries-gN1IBRuHjh"
+                  target="_blank"
+                  rel="external"
+                  >Click Here</a
+                >
+                to see the solution on Frontend Mentor
+              </p>
+            </li>
+
+            <li>
+              <h3><a class="link-challenge" href="https://crtykwod.github.io/Frontend-Mentor/newbie/d006/four_card_feature" target="_blank" rel="external">Four Cards Challenge</a></h3>
+              <img src="./newbie/d006/four_card_feature/images/screenshot.png" alt="Sixth Newbie Challenge screenshot. It shows a grid layout with a title and four cards.">
+              <p>Aqui, eu precisei desenvolver mais os meus conhecimentos de <code>display:grid;</code> e principalmente de <code>@media</code> para criar um layout responsivo com os cards.</p>
+              <p class="english">Here, I needed to further develop my knowledge of <code>display:grid;</code> and especially <code>@media</code> to create a responsive layout with the cards.</p>
+              <p><a class="frontend-redirect" href="https://www.frontendmentor.io/solutions/four-cards-challenge-with-css-grid-and-media-iLF54BFECl" target="_blank" rel="external">Click Here</a> to see the solution on Frontend Mentor</p>
+            </li>
+          </ul>
+        </details>
+
+        <details class="challenge junior">
+          <summary>#2 - Junior -- 0 challenges completed</summary>
+          <ul class="grid gap-6">
+            <li>
+              <p>> Ainda nada aqui...</p>
+              <p class="english">> Still nothing here...</p>
+            </li>
+          </ul>
+        </details>
+
+        <details class="challenge intermediate">
+          <summary>#3 - Intermediate -- 0 challenges completed</summary>
+          <ul>
+            <li>
+              <p>> Ainda nada aqui...</p>
+              <p class="english">> Still nothing here...</p>
+            </li>
+          </ul>
+        </details>
+
+        <details class="challenge advanced">
+          <summary>#4 - Advanced -- 0 challenges completed</summary>
+          <ul>
+            <li>
+              <p>> Ainda nada aqui...</p>
+              <p class="english">> Still nothing here...</p>
+            </li>
+          </ul>
+        </details>
+      </section>
+    </main>
+
+    <script>
+      function openNav() {
+        let navList = document.getElementById("navList")
+        navList.classList.toggle("hidden")
+      }
+    </script>
+  </body>
+</html>

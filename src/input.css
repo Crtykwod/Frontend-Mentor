@@ -1,0 +1,100 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+@layer base {
+  p {
+    @apply p-0.5 mt-0.5;
+  }
+
+  code {
+    @apply px-1 py-px border rounded-md bg-violet-500 border-violet-50 whitespace-nowrap;
+  }
+}
+
+@layer components {
+  .bg-body {
+    @apply bg-black bg-gradient-to-l from-violet-950/45 to-violet-950/45;
+  }
+
+  .nav-list {
+    @apply transition-all duration-300 rounded-lg sm:rounded-none sm:rounded-t-lg;
+  }
+
+  .nav-list:active,
+  .nav-list:hover,
+  li.active {
+    @apply px-4 bg-white text-violet-950;
+  }
+
+  .english {
+    font-size: 0.85em;
+    margin-top: -5px;
+    @apply text-violet-700/60;
+
+    code {
+      @apply bg-violet-500/50 border-violet-50/50 text-violet-100/70;
+    }
+  }
+
+  .link {
+    @apply transition-all rounded-md text-violet-700;
+  }
+
+  .link::before {
+    content: "↗";
+  }
+
+  .link:hover,
+  .link:focus {
+    outline: none;
+    @apply p-1 bg-violet-700 text-violet-50;
+  }
+
+  .challenge {
+    @apply bg-violet-950 rounded-xl text-violet-50;
+
+    summary {
+      @apply px-1 py-2 text-xl list-none hover:cursor-pointer bg-violet-300 text-violet-950 rounded-xl;
+
+      &::before {
+        content: "📁 ";
+      }
+    }
+    ul {
+      @apply p-4;
+    }
+
+    h3 {
+      @apply text-lg font-semibold;
+    }
+
+    img {
+      width: clamp(40rem, 65%, 62.5rem);
+    }
+
+    .frontend-redirect {
+      @apply font-bold hover:text-violet-300
+    }
+
+    .english {
+      @apply text-violet-100/60 py-2
+    }
+  }
+
+  .challenge[open] {
+    summary {
+      @apply font-semibold rounded-none rounded-t-xl;
+
+      &::before {
+        content: "📂 ";
+      }
+    }
+  }
+
+  .link-challenge {
+    @apply rounded-none rounded-t-lg link text-violet-300;
+  }
+}
