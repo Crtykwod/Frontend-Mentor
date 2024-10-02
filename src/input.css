@@ -54,7 +54,7 @@
   }
 
   .challenge {
-    @apply bg-violet-950 rounded-xl text-violet-50;
+    @apply bg-violet-950 rounded-xl text-violet-50 lg:max-w-[80%];
 
     summary {
       @apply px-1 py-2 text-xl list-none hover:cursor-pointer bg-violet-300 text-violet-950 rounded-xl;

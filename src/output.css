@@ -653,6 +653,15 @@ code {
   background-color: rgb(46 16 101 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(245 243 255 / var(--tw-text-opacity));
+}
+
+@media (min-width: 1024px) {
+  .challenge {
+    max-width: 80%;
+  }
+}
+
+.challenge {
   summary {
     list-style-type: none;
   }
