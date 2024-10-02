@@ -96,8 +96,20 @@ textarea:not([rows]) {
 @font-face {
   font-family: "Poppins";
   font-style: normal;
-  font-weight: 200 600;
-  src: url(fonts/Poppins/Poppins-VariableFont_wght.ttf) format("truetype");
+  font-weight: 200;
+  src: url(fonts/Poppins/Poppins-ExtraLight.ttf);
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-weight: 400;
+  src: url(fonts/Poppins/Poppins-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-weight: 600;
+  src: url(fonts/Poppins/Poppins-SemiBold.ttf);
 }
 
 
