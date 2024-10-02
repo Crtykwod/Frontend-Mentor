@@ -10,7 +10,11 @@
   }
 
   code {
-    @apply px-1 py-px border rounded-md bg-violet-500 border-violet-50 whitespace-nowrap;
+    @apply px-1 py-px border rounded-md bg-violet-700 border-violet-50 whitespace-nowrap;
+  }
+
+  h2 {
+    @apply inline-block
   }
 }
 
@@ -85,6 +89,7 @@
   }
 
   .challenge[open] {
+
     summary {
       @apply font-semibold rounded-none rounded-t-xl;
 

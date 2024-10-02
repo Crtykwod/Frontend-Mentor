@@ -566,11 +566,15 @@ code {
   --tw-border-opacity: 1;
   border-color: rgb(245 243 255 / var(--tw-border-opacity));
   --tw-bg-opacity: 1;
-  background-color: rgb(139 92 246 / var(--tw-bg-opacity));
+  background-color: rgb(109 40 217 / var(--tw-bg-opacity));
   padding-left: 0.25rem;
   padding-right: 0.25rem;
   padding-top: 1px;
   padding-bottom: 1px;
+}
+
+h2 {
+  display: inline-block;
 }
 
 .bg-body {
