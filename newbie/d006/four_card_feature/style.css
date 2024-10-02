@@ -245,8 +245,8 @@ header {
 
 @media only screen and (min-width: 62rem) {
   .container {
-    max-width: fit-content;
-    margin: auto;
+    padding: 0;
+    grid-template-columns: initial;
     grid-template-areas: 
     ". t ."
     "s t c"
@@ -258,6 +258,7 @@ header {
 
   .box-supervisor {
     grid-area: s;
+    justify-self: right;
   }
   .box-teamBuilder {
     grid-area: t;
