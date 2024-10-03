@@ -15,28 +15,28 @@
       </div>
       <nav class="self-end sm:self-start">
         <div class="pb-1 sm:hidden">
-          <svg
-            id="navButton"
-            onclick="openNav()"
-            class="hover:cursor-pointer"
-            fill="#fff"
-            version="1.1"
-            id="Capa_1"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-            width="1.50rem"
-            height="1.50rem"
-            viewBox="0 0 124 124"
-            xml:space="preserve">
-            <g>
-              <path
-                d="M112,6H12C5.4,6,0,11.4,0,18s5.4,12,12,12h100c6.6,0,12-5.4,12-12S118.6,6,112,6z" />
-              <path
-                d="M112,50H12C5.4,50,0,55.4,0,62c0,6.6,5.4,12,12,12h100c6.6,0,12-5.4,12-12C124,55.4,118.6,50,112,50z" />
-              <path
-                d="M112,94H12c-6.6,0-12,5.4-12,12s5.4,12,12,12h100c6.6,0,12-5.4,12-12S118.6,94,112,94z" />
-            </g>
-          </svg>
+          <button id="navButton" onclick="openNav()">
+            <svg
+              class="hover:cursor-pointer"
+              fill="#fff"
+              version="1.1"
+              id="Capa_1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              width="1.50rem"
+              height="1.50rem"
+              viewBox="0 0 124 124"
+              xml:space="preserve">
+              <g>
+                <path
+                  d="M112,6H12C5.4,6,0,11.4,0,18s5.4,12,12,12h100c6.6,0,12-5.4,12-12S118.6,6,112,6z" />
+                <path
+                  d="M112,50H12C5.4,50,0,55.4,0,62c0,6.6,5.4,12,12,12h100c6.6,0,12-5.4,12-12C124,55.4,118.6,50,112,50z" />
+                <path
+                  d="M112,94H12c-6.6,0-12,5.4-12,12s5.4,12,12,12h100c6.6,0,12-5.4,12-12S118.6,94,112,94z" />
+              </g>
+            </svg>
+          </button>
           <ul
             id="navList"
             class="absolute hidden bg-violet-600 rounded-md p-2 flex-col text-end right-0 flex gap-1 font-semibold text-violet-50 pt-1.5">
@@ -56,43 +56,124 @@
       </nav>
     </header>
     <main
-      class="grid gap-4 p-5 m-auto bg-white md:w-4/5 xl:w-3/5 rounded-b-2xl">
+      class="grid gap-4 p-5 m-auto bg-white leading-relaxed md:w-4/5 xl:w-3/5 xl:min-w-[62.5rem] rounded-b-2xl">
       <section>
         <div class="pt-5 text-4xl font-semibold text-center pb-14">
           <h1 class="">Frontend Mentor - Desafios</h1>
           <p lang="en" class="text-lg english">Frontend Mentor - Challenges</p>
         </div>
         <div class="text-[1.1rem] pb-4">
-          <p>&lt;p&gt; Oi, tudo bem? &lt;/p&gt;</p>
-          <p lang="en" class="english">
-            &lt;p class="english"&gt; Hey, what's up? &lt;/p&gt;
-          </p>
+          <p>Oi, tudo bem?</p>
         </div>
         <p>
           Aqui você encontrará todo meu avanço nos desafios do
-          <a class="link" href="https://frontendmentor.io/profile/Crtykwod"
+          <a class="link" href="https://frontendmentor.io/profile/Crtykwod" target="_blank" rel="external"
             >Frontend Mentor</a
           >, explicados e separados por dificuldade:
         </p>
-        <p lang="en" class="english">
-          Here you will find all my advancement in the Frontend Mentor's
-          challenges, explained and separated by difficulty:
-        </p>
         <p>
           GitHub Repo:
-          <a class="link" href="https://github.com/Crtykwod/Frontend-Mentor"
+          <a class="link" href="https://github.com/Crtykwod/Frontend-Mentor" target="_blank" rel="external"
             >https://github.com/Crtykwod/Frontend-Mentor</a
           >
         </p>
       </section>
 
       <section class="grid gap-4">
-        <details class="challenge">
+        <details open class="challenge">
           <summary>
-            <h2>#1 - Newbie -- 6 challenges completed</h2>
+            <h2>#1 - Newbie</h2>
           </summary>
-          <ul class="grid gap-6">
-            <li>
+          <ul class="grid">
+            <li class="challenge__item">
+              <div class="challenge__header">
+                <h3>
+                  <a
+                    class="link-challenge"
+                    href="https://crtykwod.github.io/Frontend-Mentor/newbie/d001/qr_code/"
+                    target="_blank"
+                    rel="external"
+                    >QR Code Challenge</a
+                  >
+                </h3>
+                <ul class="tags">
+                  <li class="tag tag-css">Flexbox</li>
+                </ul>
+              </div>
+              <div class="challenge__content">
+                <img
+                  class=""
+                  src="./newbie/d001/qr_code/images/screenshot.png"
+                  alt="first newbie project screenshot. There's a card in the center with a QR Code and some text in it." />
+                <div class="challenge__text">
+                  <p>
+                    Esse desafio consistiu em criar um card simples e colocar
+                    uma imagem de QR Code dentro dele, foi um exercício
+                    introdutório que me ajudou a entender melhor alguns
+                    conceitos de
+                    <code>display: flex;</code>
+                  </p>
+                  <div
+                  title="This challenge consisted of creating a simple card and placing a QR Code image inside it. It was an introductory exercise that helped me better understand some concepts of display: flex;"
+                  class="english-hover">
+                  <svg
+                    fill="#1e1b4b"
+                    version="1.1"
+                    id="Capa_1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    width="15px"
+                    height="15px"
+                    viewBox="0 0 416.979 416.979"
+                    xml:space="preserve">
+                    <g>
+                      <path
+                        d="M356.004,61.156c-81.37-81.47-213.377-81.551-294.848-0.182c-81.47,81.371-81.552,213.379-0.181,294.85
+                        c81.369,81.47,213.378,81.551,294.849,0.181C437.293,274.636,437.375,142.626,356.004,61.156z M237.6,340.786
+                        c0,3.217-2.607,5.822-5.822,5.822h-46.576c-3.215,0-5.822-2.605-5.822-5.822V167.885c0-3.217,2.607-5.822,5.822-5.822h46.576
+                        c3.215,0,5.822,2.604,5.822,5.822V340.786z M208.49,137.901c-18.618,0-33.766-15.146-33.766-33.765
+                        c0-18.617,15.147-33.766,33.766-33.766c18.619,0,33.766,15.148,33.766,33.766C242.256,122.755,227.107,137.901,208.49,137.901z" />
+                    </g>
+                  </svg>
+                  <p>English Version</p>
+                </div>
+                  <p lang="en" class="english">
+                    This challenge consisted of creating a simple card and
+                    placing a QR Code image inside it. It was an introductory
+                    exercise that helped me better understand some concepts of
+                    <code>display: flex;</code>
+                  </p>
+                </div>
+              </div>
+              <div class="challenge__aside">
+                <div class="challenge__links">
+                  <h4>Useful Links:</h4>
+                  <ul>
+                    <li>
+                      <a
+                        class="link"
+                        href="https://www.frontendmentor.io/solutions/responsive-page-with-css-flexbox-H2K-AH208v"
+                        target="_blank"
+                        rel="external"
+                        >Frontend Mentor Solution Page</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="link"
+                        href="https://github.com/Crtykwod/Frontend-Mentor/tree/main/newbie/d001/qr_code"
+                        target="_blank"
+                        rel="external"
+                        >GitHub Repository</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <!-- <ul class="grid gap-10">
+            <li class="challenge__item">
               <h3>
                 <a
                   class="link-challenge"
@@ -296,12 +377,12 @@
                 >Click Here to see the solution on Frontend Mentor
               </a>
             </li>
-          </ul>
+          </ul> -->
         </details>
 
         <details class="challenge junior">
           <summary>
-            <h2>#2 - Junior -- 0 challenges completed</h2>
+            <h2>#2 - Junior</h2>
           </summary>
           <ul class="grid gap-6">
             <li>
@@ -313,7 +394,7 @@
 
         <details class="challenge intermediate">
           <summary>
-            <h2>#3 - Intermediate -- 0 challenges completed</h2>
+            <h2>#3 - Intermediate</h2>
           </summary>
           <ul>
             <li>
@@ -325,7 +406,7 @@
 
         <details class="challenge advanced">
           <summary>
-            <h2>#4 - Advanced -- 0 challenges completed</h2>
+            <h2>#4 - Advanced</h2>
           </summary>
           <ul>
             <li>
@@ -338,6 +419,7 @@
     </main>
 
     <script>
+      let navButton = document.getElementById("navButton");
       function openNav() {
         let navList = document.getElementById("navList");
         navList.classList.toggle("hidden");
