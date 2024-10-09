@@ -1072,10 +1072,6 @@ h2 {
 }
 
 @media (min-width: 640px) {
-  .sm\:block {
-    display: block;
-  }
-
   .sm\:flex {
     display: flex;
   }
@@ -1098,10 +1094,6 @@ h2 {
     padding-left: 10%;
     padding-right: 10%;
   }
-
-  .md\:pl-\[10\%\] {
-    padding-left: 10%;
-  }
 }
 
 @media (min-width: 1280px) {
@@ -1116,19 +1108,5 @@ h2 {
   .xl\:px-\[20\%\] {
     padding-left: 20%;
     padding-right: 20%;
-  }
-
-  .xl\:px-\[15\%\] {
-    padding-left: 15%;
-    padding-right: 15%;
-  }
-
-  .xl\:px-\[17\%\] {
-    padding-left: 17%;
-    padding-right: 17%;
-  }
-
-  .xl\:pl-\[20\%\] {
-    padding-left: 20%;
   }
 }
