@@ -16,8 +16,10 @@
 
       <div class="flex self-end gap-4 pb-1 button-wrapper sm:hidden">
         <div>
-          <button id="langButton" onclick="openLang()">
+          <button aria-expanded="false" id="langButton" onclick="openLang()">
             <svg
+              tabindex="-1"
+              aria-hidden="false"
               class="hover:cursor-pointer"
               width="1.5rem"
               height="1.5rem"
@@ -57,8 +59,10 @@
           </ul>
         </div>
         <nav>
-          <button id="navButton" onclick="openNav()">
+          <button aria-expanded="false" id="navButton" onclick="openNav()">
             <svg
+              tabindex="-1"
+              aria-hidden="false"
               class="hover:cursor-pointer"
               fill="#fff"
               version="1.1"
@@ -97,8 +101,10 @@
           </ul>
         </nav>
         <div>
-          <button id="langButtonPc" onclick="openLang()">
+          <button aria-expanded="false" id="langButtonPc" onclick="openLang()">
             <svg
+              tabindex="-1"
+              aria-hidden="false"
               class="hover:cursor-pointer"
               width="1.5rem"
               height="1.5rem"
@@ -190,10 +196,13 @@
                     >
                   </h3>
                   <button
+                    aria-expanded="false"
                     type="button"
                     class="button__collapsible"
                     onclick="collapseChallenge(this)">
                     <svg
+                      tabindex="-1"
+                      aria-hidden="false"
                       xmlns="http://www.w3.org/2000/svg"
                       shape-rendering="geometricPrecision"
                       text-rendering="geometricPrecision"
@@ -266,10 +275,13 @@
                     >
                   </h3>
                   <button
+                    aria-expanded="false"
                     type="button"
                     class="button__collapsible"
                     onclick="collapseChallenge(this)">
                     <svg
+                      tabindex="-1"
+                      aria-hidden="false"
                       xmlns="http://www.w3.org/2000/svg"
                       shape-rendering="geometricPrecision"
                       text-rendering="geometricPrecision"
@@ -344,10 +356,13 @@
                     >
                   </h3>
                   <button
+                    aria-expanded="false"
                     type="button"
                     class="button__collapsible"
                     onclick="collapseChallenge(this)">
                     <svg
+                      tabindex="-1"
+                      aria-hidden="false"
                       xmlns="http://www.w3.org/2000/svg"
                       shape-rendering="geometricPrecision"
                       text-rendering="geometricPrecision"
@@ -421,10 +436,13 @@
                     >
                   </h3>
                   <button
+                    aria-expanded="false"
                     type="button"
                     class="button__collapsible"
                     onclick="collapseChallenge(this)">
                     <svg
+                      tabindex="-1"
+                      aria-hidden="false"
                       xmlns="http://www.w3.org/2000/svg"
                       shape-rendering="geometricPrecision"
                       text-rendering="geometricPrecision"
@@ -497,10 +515,13 @@
                     >
                   </h3>
                   <button
+                    aria-expanded="false"
                     type="button"
                     class="button__collapsible"
                     onclick="collapseChallenge(this)">
                     <svg
+                      tabindex="-1"
+                      aria-hidden="false"
                       xmlns="http://www.w3.org/2000/svg"
                       shape-rendering="geometricPrecision"
                       text-rendering="geometricPrecision"
@@ -571,10 +592,13 @@
                     >
                   </h3>
                   <button
+                    aria-expanded="false"
                     type="button"
                     class="button__collapsible"
                     onclick="collapseChallenge(this)">
                     <svg
+                      tabindex="-1"
+                      aria-hidden="false"
                       xmlns="http://www.w3.org/2000/svg"
                       shape-rendering="geometricPrecision"
                       text-rendering="geometricPrecision"
@@ -668,9 +692,6 @@
         </details>
       </section>
     </main>
-    <span class="collapsible"></span>
-    <button class="collapsible"></button>
-    <p class="collapsible"></p>
     <script src="./src/script.js"></script>
   </body>
 </html>
@@ -692,8 +713,10 @@
           <ul class="tags">
             <li class="tag"></li>
           </ul>
-          <button type="button" class="button__collapsible" onclick="collapseChallenge(this)">
+          <button  aria-expanded="false" type="button" class="button__collapsible" onclick="collapseChallenge(this)">
             <svg
+              tabindex="-1"
+              aria-hidden="false"
               xmlns="http://www.w3.org/2000/svg"
               shape-rendering="geometricPrecision"
               text-rendering="geometricPrecision"
