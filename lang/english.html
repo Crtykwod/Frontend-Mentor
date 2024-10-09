@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="pt-br">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./src/output.css" />
+    <link rel="stylesheet" href="../src/output.css" />
     <title>Frontend Mentor - Index</title>
   </head>
   <body class="bg-body">
@@ -11,11 +11,11 @@
       class="flex justify-between sm:flex-col w-screen gap-4 px-8 pt-4 bg-violet-600 md:px-[10%] xl:px-[20%]">
       <div class="text-2xl font-bold text-white">
         <p>Carlos Samuel</p>
-        <p class="text-xl">write("Olá, Mundo!");</p>
+        <p class="text-xl">write("Hello World!");</p>
       </div>
 
       <div class="flex self-end gap-4 pb-1 button-wrapper sm:hidden">
-        <div>
+        <div class="">
           <button id="langButton" onclick="openLang()">
             <svg
               class="hover:cursor-pointer"
@@ -37,20 +37,20 @@
           </button>
           <ul
             id="langList"
-            class="absolute flex flex-col hidden gap-1 p-2 font-semibold rounded-md bg-violet-600 text-violet-50 right-7">
+            class="absolute hidden flex flex-col gap-1 p-2 rounded-md bg-violet-600 text-violet-50 right-7 font-semibold">
+            <li class="nav-list lang">
+              <a href="../index.html"
+                ><img
+                  width="39px"
+                  src="../src/images/brasil-flag.svg"
+                  alt="Bandeira do Brasil" />Português</a
+              >
+            </li>
             <li class="nav-list active lang">
               <a href="#"
                 ><img
                   width="39px"
-                  src="./src/images/brasil-flag.svg"
-                  alt="Bandeira do Brasil" />Português</a
-              >
-            </li>
-            <li class="nav-list lang">
-              <a href=""
-                ><img
-                  width="39px"
-                  src="./src/images/uk-flag.svg"
+                  src="../src/images/uk-flag.svg"
                   alt="UK Flag" />English</a
               >
             </li>
@@ -119,19 +119,19 @@
           <ul
             id="langListPc"
             class="absolute hidden flex flex-col gap-1 p-2 font-semibold rounded-b-md bg-violet-600 text-violet-50 right-0">
+            <li class="nav-list lang">
+              <a href="../index.html"
+                ><img
+                  width="39px"
+                  src="../src/images/brasil-flag.svg"
+                  alt="Bandeira do Brasil" />Português</a
+              >
+            </li>
             <li class="nav-list active lang">
               <a href="#"
                 ><img
                   width="39px"
-                  src="./src/images/brasil-flag.svg"
-                  alt="Bandeira do Brasil" />Português</a
-              >
-            </li>
-            <li class="nav-list lang">
-              <a href="./lang/english.html"
-                ><img
-                  width="39px"
-                  src="./src/images/uk-flag.svg"
+                  src="../src/images/uk-flag.svg"
                   alt="UK Flag" />English</a
               >
             </li>
@@ -150,14 +150,15 @@
           <p>Oi, tudo bem?</p>
         </div>
         <p>
-          Aqui você encontrará todo meu avanço nos desafios do
+          Here, you wil find all my progress through
           <a
             class="link"
             href="https://frontendmentor.io/profile/Crtykwod"
             target="_blank"
             rel="external"
             >Frontend Mentor</a
-          >, explicados e separados por dificuldade:
+          >
+          Challenges:
         </p>
         <p>
           GitHub Repo:
@@ -208,18 +209,17 @@
                 </div>
                 <img
                   class="challenge__image"
-                  src="./newbie/d001/qr_code/images/screenshot.png"
+                  src="../newbie/d001/qr_code/images/screenshot.png"
                   alt="First Challenge Screenshot. There's a card in the center with a QR Code and some text in it." />
               </div>
               <div class="collapsible">
                 <div class="challenge__content">
                   <div class="challenge__text">
                     <p>
-                      Esse desafio consistiu em criar um card simples e colocar
-                      uma imagem de QR Code dentro dele, foi um exercício
-                      introdutório que me ajudou a entender melhor alguns
-                      conceitos de
-                      <code>display: flex;</code>
+                      This challenge consisted in creating a simple card and
+                      place a QR Code image inside it. It was an initial
+                      challenge that helped me understading better some
+                      <code>display: flex;</code> concepts.
                     </p>
                   </div>
                 </div>
@@ -284,7 +284,7 @@
                 </div>
                 <img
                   class="challenge__image"
-                  src="./newbie/d002/blog_preview/screenshot.png"
+                  src="../newbie/d002/blog_preview/screenshot.png"
                   alt="Second newbie challenge screenshot. There's a card in the center, there's an image on top of the card and text below it"
                   alt="Second Challenge Screenshot: There's a card in the center" />
               </div>
@@ -292,12 +292,13 @@
                 <div class="challenge__content">
                   <div class="challenge__text">
                     <p>
-                      Esse desafio foi basicamente o mesmo do anterior, a
-                      diferença é que nesse eu deveria mudar a cor do título
-                      quando passase com o mouse sobre ele, para isso usei
-                      <code>:hover</code>. Aproveitei e aprendi um pouco mais
-                      sobre <code>display: grid;</code>, tanto que foi isso que
-                      usei para centralizar o card.
+                      This challenge was basically the same as the previous one,
+                      the difference is that in this one I should change the
+                      color of the title when you hover over it with the mouse,
+                      for that I used
+                      <code>:hover</code>. I also learned a bit more about
+                      <code>display: grid;</code>, and that's what I used to
+                      center the card.
                     </p>
                   </div>
                 </div>
@@ -362,7 +363,7 @@
                 </div>
                 <img
                   class="challenge__image"
-                  src="./newbie/d003/social_links/assets/images/screenshot.png"
+                  src="../newbie/d003/social_links/assets/images/screenshot.png"
                   alt="Third Newbie Challenge screenshot. It shows a card with a profile picture and social media links"
                   alt="Third Challenge Screenshot: There's a card in the center displaying some info about me and my social media" />
               </div>
@@ -370,11 +371,11 @@
                 <div class="challenge__content">
                   <div class="challenge__text">
                     <p>
-                      Nesse desafio, eu precisei precisar inserir uma foto
-                      redonda, para isso usei <code>border-radius: 50%;</code> e
-                      funcionou perfeitamente. Também precisei colocar minhas
-                      redes sociais dentro de caixas que alteravam a cor quando
-                      eu passava o mouse em cima.
+                      In this challenge, I needed to insert a rounded photo, so
+                      I used <code>border-radius: 50%;</code> and it worked
+                      perfectly. I also needed to put my social networks inside
+                      containers that change the color when I hover the mouse
+                      over it.
                     </p>
                   </div>
                 </div>
@@ -439,18 +440,18 @@
                 </div>
                 <img
                   class="object-top challenge__image"
-                  src="./newbie/d004/recipe_page/assets/images/screenshot.png"
+                  src="../newbie/d004/recipe_page/assets/images/screenshot.png"
                   alt="Fourth Challenge Screenshot: It shows a recipe of an omelette" />
               </div>
               <div class="collapsible">
                 <div class="challenge__content">
                   <div class="challenge__text">
                     <p>
-                      Esse foi um desafio simples, consistiu apenas em criar um
-                      página de receita focando em usar tags HTML semânticas
-                      como <code>header</code>, <code>main</code> e
-                      <code>footer</code>. Para um melhor design mobile, usei
-                      também <code>@media</code>
+                      This was a simple challenge, it consisted of creating a
+                      recipe page focusing on using semantic HTML tags
+                      like <code>header</code>, <code>main</code> and
+                      <code>footer</code>. For better mobile design, I also used
+                      <code>@media</code>
                     </p>
                   </div>
                 </div>
@@ -515,16 +516,16 @@
                 </div>
                 <img
                   class="challenge__image"
-                  src="./newbie/d005/product_preview/images/screenshot.png"
+                  src="../newbie/d005/product_preview/images/screenshot.png"
                   alt="Fifth Challenge Screenshot: There's a card in the center previewing a perfume, with description, price and a buy button" />
               </div>
               <div class="collapsible">
                 <div class="challenge__content">
                   <div class="challenge__text">
                     <p>
-                      Esse desafio se baseou em <code>@media</code>. O objetivo
-                      era criar dois cards, um para versão mobile e outro para
-                      desktop, para isso usei a aproximação mobile-first.
+                      This challenge was based on <code>@media</code>. The goal
+                      was to create two cards, one for the mobile version and the other for
+                      desktop, for this I used the mobile-first approach.
                     </p>
                   </div>
                 </div>
@@ -589,17 +590,17 @@
                 </div>
                 <img
                   class="challenge__image"
-                  src="./newbie/d006/four_card_feature/images/screenshot.png"
+                  src="../newbie/d006/four_card_feature/images/screenshot.png"
                   alt="Sixth Challenge Screenshot: It presents a website with four cards describing an AI tool features" />
               </div>
               <div class="collapsible">
                 <div class="challenge__content">
                   <div class="challenge__text">
                     <p>
-                      Aqui, eu precisei desenvolver mais os meus conhecimentos
-                      de
-                      <code>display:grid;</code> e principalmente de
-                      <code>@media</code> para criar um layout responsivo com os
+                      Here, I needed to develop my knowledge further
+                      of
+                      <code>display:grid;</code> and principally of
+                      <code>@media</code> to create a responsive layout with the
                       cards.
                     </p>
                   </div>
@@ -640,7 +641,7 @@
           </summary>
           <ul class="grid gap-6">
             <li>
-              <p>> Ainda nada aqui...</p>
+              <p>> Still nothing here...</p>
             </li>
           </ul>
         </details>
@@ -651,7 +652,7 @@
           </summary>
           <ul>
             <li>
-              <p>> Ainda nada aqui...</p>
+              <p>> Still nothing here...</p>
             </li>
           </ul>
         </details>
@@ -662,7 +663,7 @@
           </summary>
           <ul>
             <li>
-              <p>> Ainda nada aqui...</p>
+              <p>> Still nothing here...</p>
             </li>
           </ul>
         </details>
@@ -671,7 +672,7 @@
     <span class="collapsible"></span>
     <button class="collapsible"></button>
     <p class="collapsible"></p>
-    <script src="./src/script.js"></script>
+    <script src="../src/script.js"></script>
   </body>
 </html>
 
