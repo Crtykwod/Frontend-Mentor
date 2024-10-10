@@ -17,7 +17,10 @@
     @apply inline-block;
   }
 
-  @media only screen and (max-width:374px) {
+  @media only screen and (max-width:359px) {
+    .challenge {
+      margin: auto;
+    }
     img {
       display: none
     }
@@ -65,7 +68,7 @@
   }
 
   .challenge {
-    @apply bg-violet-950 rounded-xl text-violet-50 max-w-[50rem] min-w-[18.75rem];
+    @apply bg-violet-950 rounded-xl text-violet-50 max-w-[50rem] w-[100%];
 
     summary {
       @apply px-1 py-2 text-xl list-none hover:cursor-pointer bg-violet-300 text-violet-950 rounded-xl;
@@ -114,7 +117,7 @@
   }
 
   .button__collapsible {
-    @apply absolute bottom-2 left-1 w-4 h-1 hover:cursor-pointer fill-violet-500 self-end;
+    @apply absolute bottom-4 left-1 w-7 h-1 hover:cursor-pointer fill-violet-500 self-end;
     
     transition: transform 350ms ease;
   }
