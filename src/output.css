@@ -575,6 +575,12 @@ h2 {
   display: inline-block;
 }
 
+@media only screen and (max-width:374px) {
+  img {
+    display: none
+  }
+}
+
 .bg-body {
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
