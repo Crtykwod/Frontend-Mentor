@@ -436,6 +436,10 @@ main {
     grid-row: 1 / span 3;
   }
 
+  .b {
+    letter-spacing: -0.0563rem;
+  }
+
   .b img {
     max-height: 4.2rem;
   }
