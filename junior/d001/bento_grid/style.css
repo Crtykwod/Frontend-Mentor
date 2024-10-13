@@ -192,10 +192,12 @@ main {
   gap: var(---100);
   font: var(--txt-regular);
   letter-spacing: var(--txt-ls-regular);
+
 }
 
 .a .stars img {
   margin: auto;
+  max-width: min(100%, 12rem);
 }
 
 .a .highlight {
