@@ -195,7 +195,6 @@ main {
 }
 
 .a .stars img {
-  max-width: 12rem;
   margin: auto;
 }
 
@@ -212,7 +211,7 @@ main {
 }
 
 .b img {
-  max-width: 20rem;
+  max-width: min(20rem, 320px);
 }
 
 .c { /* Posting Schedule */
@@ -225,11 +224,11 @@ main {
 }
 
 .c .image__container {
-  height: 8.4375rem;
+  height: min(8.4375rem, 180px);
 }
 
 .c img {
-  max-width: 13rem;
+  max-width: min(13rem, 285px);
   position: absolute;
   overflow: hidden;
 }
@@ -272,7 +271,7 @@ main {
 }
 
 .e img {
-  max-width: 14.1875rem;
+  max-width: 100%;
   margin: auto;
 }
 
@@ -313,7 +312,7 @@ main {
 }
 
 .g img {
-  max-width: 11.875rem;
+  max-width: min(11.875rem, 200px);
 }
 
 .h { /* Write with AI */
@@ -326,7 +325,7 @@ main {
 }
 
 .h img {
-  max-width: 13.75rem;
+  max-width: min(13.75rem, 260px);
 }
 
 .attribution {
@@ -364,7 +363,7 @@ main {
   }
 
   .b img {
-    max-width: 23rem;
+    max-width: min(23rem, 400px);
   }
 
   .d img {
@@ -373,8 +372,12 @@ main {
   }
 
   .d p {
-    max-width: 50%;
+    max-width: max(20rem, 400px);
     margin: auto;
+  }
+
+  .e img {
+    max-width: min(20rem, 340px);
   }
   
   .e {
@@ -448,8 +451,12 @@ main {
     overflow: hidden;
   }
 
+  .c .image__container {
+    margin-bottom: -2.5rem;
+  }
+
   .c img {
-    top: 0.5rem;
+    top: max(8px, 0.5rem);
   }
 
   .d {
@@ -505,7 +512,15 @@ main {
     justify-content: center;
   }
 
+  .g img {
+    max-width: 100%;
+  }
+
   .h .image__container {
     margin: 0 -0.75rem 0 0;
+  }
+
+  .h img {
+    max-width: 12rem;
   }
 }
