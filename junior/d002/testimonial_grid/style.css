@@ -518,12 +518,12 @@ main {
   gap: 2.5rem;
 }
 
-.testimonial p:first-child {
+.testimonial h2 {
   font-size: 1.25rem;
   font-weight: 600;
 }
 
-.testimonial p:last-child {
+.testimonial p {
   opacity: 0.7;
 }
 
