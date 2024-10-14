@@ -483,7 +483,6 @@ main {
   display: grid;
   gap: 1.5rem;
   padding: 4.4375rem 1.5rem;
-  width: clamp(17.5rem, 90vw, 68.75rem);
   margin: auto;
 }
 
