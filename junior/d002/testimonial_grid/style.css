@@ -568,37 +568,61 @@ main {
   border-radius: 0.1875rem;
 }
 
-@media only screen and (min-width: 64rem) {
-  body {
-    max-width: 75%;
-    margin: auto;
+@media only screen and (min-width: 55rem) {
+  main {
+    max-width: 90vw;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+      "a a"
+      "b c"
+      "d d"
+      "e e";
   }
 
+  .card-1 { grid-area: a; }
+  .card-2 { grid-area: b; }
+  .card-3 { grid-area: c; }
+  .card-4 { grid-area: d; }
+  .card-5 { grid-area: e; }
+
+  .card {
+    padding: 2rem;
+    padding-top: 1.5rem;
+  }
+  
+  .testimonial {
+    gap: 1.5rem;
+  }
+
+  .testimonial h2 {
+    font-size: 1.375rem;
+  }
+}
+
+@media only screen and (min-width: 80rem) {
+
   main {
-    grid-template-columns: repeat(4, 315px);
+    grid-template-columns: repeat(4, minmax(auto, 19.6875rem));
     grid-template-rows: repeat(2, 1fr);
     grid-template-areas:
       "a a b e"
       "c d d e";
   }
 
+  .card-1 { grid-area: a; }
+  .card-2 { grid-area: b; }
+  .card-3 { grid-area: c; }
+  .card-4 { grid-area: d; }
+  .card-5 { grid-area: e; }
+
   .card {
-    padding: 2rem;
-    padding-top: 1.5rem;
     background-size: 8rem 8.5rem;
     background-position: top 0% right 16.5%;
   }
 
-  .testimonial {
-    gap: 1.5rem;
-  }
-
   .testimonial h2 {
-    font-size: 25px;
-  }
-
-  .card-1 {
-    grid-area: a;
+    font-size: 1.5625rem;
   }
 
   .card-1 .testimonial,
@@ -606,23 +630,8 @@ main {
     gap: 1rem;
   }
 
-  .card-2 {
-    grid-area: b;
-  }
-
-  .card-3 {
-    grid-area: c;
-  }
-
   .card-3 .testimonial h2 {
     padding-right: 2rem;
   }
 
-  .card-4 {
-    grid-area: d;
-  }
-
-  .card-5 {
-    grid-area: e;
-  }
 }
