@@ -569,6 +569,11 @@ main {
 }
 
 @media only screen and (min-width: 64rem) {
+  body {
+    max-width: 75%;
+    margin: auto;
+  }
+
   main {
     grid-template-columns: repeat(4, 315px);
     grid-template-rows: repeat(2, 1fr);
@@ -580,6 +585,8 @@ main {
   .card {
     padding: 2rem;
     padding-top: 1.5rem;
+    background-size: 8rem 8.5rem;
+    background-position: top 0% right 16.5%;
   }
 
   .testimonial {
@@ -605,6 +612,10 @@ main {
 
   .card-3 {
     grid-area: c;
+  }
+
+  .card-3 .testimonial h2 {
+    padding-right: 2rem;
   }
 
   .card-4 {
