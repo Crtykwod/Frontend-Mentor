@@ -574,19 +574,19 @@ section.content {
   border-radius: 10px;
 }
 
-.content hgroup {
+.text-container__header {
   display: grid;
   gap: var(--space-200);
 }
 
-.content hgroup p {
+.text-container__header p {
   font: var(--txt-color);
   color: var(--clr-Cyan-600);
   letter-spacing: var(--txt-ls-color);
   text-transform: uppercase;
 }
 
-.content hgroup h2 {
+.text-container__header h2 {
   font: var(--txt-heading-2);
   color: var(--clr-Slate-900);
 }
