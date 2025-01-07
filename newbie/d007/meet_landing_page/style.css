@@ -671,6 +671,7 @@ main footer .button {
 
   main {
     position: relative;
+    overflow-x: hidden;
   }
 
   section {
