@@ -273,6 +273,7 @@ button:enabled:hover {
   main {
     flex-direction: row-reverse;
     gap: var(--400);
+    box-shadow: 8px 8px 32px 0 rgba(0, 0, 0, 0.158);
   }
 
   picture {
