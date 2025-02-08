@@ -91,6 +91,7 @@ table {
 
 body {
   font: var(--txt-body);
+  line-height: 1.5;
   color: var(--dark-navy);
   display: grid;
   grid-template-rows: 1fr 0fr;
@@ -146,11 +147,17 @@ button {
 }
 
 ul {
-  list-style-type: none;
   display: grid;
-  grid-template-columns: auto 1fr;
   column-gap: var(--100);
   row-gap: .625rem;
+}
+
+li {
+  background-image: url(assets/images/icon-list.svg);
+  background-repeat: no-repeat;
+  background-position: left center;
+  min-height: 22px;
+  padding-left: calc(21px + var(--100));
 }
 
 #submitButton:enabled {
