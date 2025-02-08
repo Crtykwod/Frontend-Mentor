@@ -35,6 +35,7 @@ function handleSubmit(e) {
       errorMessage.classList.remove("hidden");
       email.classList.add("email-error");
     }
+    email.focus();
     return showError();
   }
 
@@ -56,5 +57,5 @@ function submitSuccess() {
   email.value = "";
 }
 
-
-form.addEventListener("submit", handleSubmit)
+form.addEventListener(KeyboardEvent, activateButton);
+form.addEventListener("submit", handleSubmit);
