@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+</head>
+<body>
+
+  <main id="main">
+    <picture>
+      <source media="(min-width: 768px)" srcset="./assets/images/illustration-sign-up-desktop.svg">
+      <img src="./assets/images/illustration-sign-up-mobile.svg" alt="illustration sign-up">
+    </picture>
+    <section class="main-content">
+      <div class="main-content_text">
+        <h1>Stay updated!</h1>
+        <p>Join 60,000+ product managers receiving monthly updates on:</p>
+        <ul>
+          <img src="./assets/images/icon-list.svg">
+          <li>Product discovery and building what matters</li>
+          <img src="./assets/images/icon-list.svg">
+          <li>Measuring to ensure updates are a success</li>
+          <img src="./assets/images/icon-list.svg">
+          <li>And much more</li>
+        </ul>
+      </div>
+      <form id="form" novalidate>
+        <div class="email-input">
+          <label for="email">Email address</label>
+          <p class="error-message hidden">Please enter a valid email</p>
+          <input type="email" name="email" id="email" placeholder="email@company.com" required>
+        </div>
+        <button id="submitButton" disabled>Subscribe to monthly newsletter</button>
+      </form>
+    </section>
+  </main>
+
+  <section id="successContainer" class="hidden">
+    <img class="success-icon" src="assets/images/icon-success.svg" alt="Success Icon">
+    <div class="success-message_container">
+      <h2>Thanks for subscribing!</h2>
+      <p id="successMessage">
+      </p>
+    </div>
+    <button id="returnButton" onclick="submitSuccess()">Dismiss message</button>
+  </section>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/Crtykwod">Carlos Samuel</a>.
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>

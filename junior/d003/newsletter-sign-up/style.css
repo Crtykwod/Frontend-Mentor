@@ -1,0 +1,311 @@
+/* CSS RESET START */
+
+@import '/node_modules/modern-normalize/modern-normalize.css';
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* CSS RESET END */
+
+@font-face {
+  font-family: Roboto;
+  src: url(assets/fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(assets/fonts/Roboto-Bold.ttf);
+  font-weight: bold;
+}
+
+* {
+  /* Font Styles */
+
+  --txt-heading: bold 3.5rem/1 Roboto, sans-serif;
+  --txt-body: 1rem Roboto, sans-serif;
+  --txt-body-bold: bold 1rem Roboto, sans-serif;
+  --txt-body-small: bold 0.75rem Roboto, sans-serif;
+
+  /* Colors */
+
+  --white: rgb(255, 255, 255);
+  --grey: rgba(25, 24, 42, 0.25);
+  --pale-navy: rgb(54, 56, 78);
+  --dark-navy: rgb(36, 39, 66);
+  --vermellion: rgb(255, 98, 87);
+
+  /* Spacing */
+
+  --50: 0.5rem;
+  --100: 1rem;
+  --150: 1.5rem;
+  --250: 2.5rem;
+  --400: 4rem;
+}
+
+body {
+  font: var(--txt-body);
+  color: var(--dark-navy);
+  display: grid;
+  grid-template-rows: 1fr 0fr;
+  min-height: 100vh;
+  max-width: 375px;
+  margin: auto;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--250);
+  margin-bottom: 2.5rem;
+}
+
+section {
+  padding-inline: var(--150);
+  display: flex;
+  flex-direction: column;
+  gap: var(--250);
+}
+
+picture, img {
+  display: block;
+  max-width: 100%;
+}
+
+h1, h2 {
+  font: var(--txt-heading);
+  font-size: 2.5rem;
+}
+
+form {
+  display: grid;
+  gap: var(--150);
+}
+
+strong {
+  font: var(--txt-body-bold);
+}
+
+button {
+  font: var(--txt-body-bold);
+  color: var(--white);
+  background-color: var(--pale-navy);
+  border: none;
+  border-radius: 8px;
+  padding-block: 1rem;
+  padding-inline: 1.5rem;
+  text-align: center;
+  background-size: 100% 200%;
+  transition: 250ms ease-out;
+}
+
+ul {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: var(--100);
+  row-gap: .625rem;
+}
+
+#submitButton:enabled {
+  background-image: linear-gradient(to bottom, var(--vermellion), #FF527B, var(--vermellion));
+}
+
+button:enabled:hover {
+  background-image: linear-gradient(to bottom, var(--vermellion), #FF527B);
+  animation: bg-gradient 2s linear infinite alternate;
+  cursor: pointer;
+  box-shadow: 0 24px 28px 0 #00000010, 0 16px 16px 0 rgb(from var(--vermellion) r g b / 40%);
+}
+
+@keyframes bg-gradient {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 0% 100%;
+  }
+}
+
+.hidden {
+  display: none !important;
+}
+
+.main-content_text {
+  display: grid;
+  gap: var(--150);
+}
+
+.email-input {
+  grid-template-columns: repeat(2, 1fr);
+  display: grid;
+  gap: var(--50);
+}
+
+#email {
+  grid-column: span 2;
+  border-radius: 8px;
+  border: 1px solid var(--grey);
+  padding-block: 1rem;
+  padding-inline: 1.5rem;
+}
+
+.error-message {
+  color: var(--vermellion);
+  font: var(--txt-body-small);
+  text-align: right;
+}
+
+.email-error {
+  border: 2px solid var(--vermellion) !important;
+  background-color: rgb(from var(--vermellion) r g b / 15%);
+}
+
+#successContainer {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.success-icon {
+  max-width: 4rem;
+  max-height: 4rem;
+  align-self: end;
+}
+
+.success-message_container {
+  display: grid;
+  gap: var(--150);
+  align-self: start;
+}
+
+#returnButton {
+  align-self: end;
+  margin-bottom: var(--250);
+}
+
+.attribution {
+  font-size: x-small;
+  text-align: center;
+  color: var(--dark-navy);
+  margin-bottom: .1875rem;
+}
+
+.attribution a {
+  text-decoration: none;
+  color: var(--vermellion);
+  transition: 250ms ease;
+}
+
+.attribution a:hover {
+  background-color: var(--vermellion);
+  color: white;
+  padding: .125rem .1875rem;
+  border-radius: 3px;
+}
+
+@media screen and (min-width:768px) {
+  body {
+    background-color: var(--pale-navy);
+    max-width: 100%;
+  }
+
+  main, #successContainer {
+    background-color: var(--white);
+    max-width: clamp(37.5rem, 14.0714rem + 48.8095vw, 58rem);
+    height: fit-content;
+    margin: auto;
+    border-radius: 2.25rem;
+  }
+
+  main {
+    flex-direction: row-reverse;
+    gap: var(--400);
+  }
+
+  picture {
+    padding: var(--150);
+    padding-left: 0;
+    display: flex;
+  }
+
+  picture img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: right;
+    border-radius: 1rem;
+  }
+
+  section {
+    padding: var(--400);
+    margin: auto;
+  }
+  
+  h1, h2 {
+    font: var(--txt-heading);
+  }
+
+  .main-content {
+    padding-right: 0;
+  }
+
+  #successContainer {
+    max-width: 31.5rem;
+    grid-template-rows: auto auto auto;
+  }
+
+  #returnButton {
+    margin-bottom: 0;
+  }
+
+  .attribution {
+    color: var(--white);
+  }
+
+}
