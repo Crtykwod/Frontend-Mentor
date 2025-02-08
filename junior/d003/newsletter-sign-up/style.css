@@ -136,7 +136,7 @@ strong {
 button {
   font: var(--txt-body-bold);
   color: var(--white);
-  background-color: var(--pale-navy);
+  background-color: var(--dark-navy);
   border: none;
   border-radius: 8px;
   padding-block: 1rem;
