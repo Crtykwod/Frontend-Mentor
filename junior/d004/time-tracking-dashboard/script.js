@@ -65,7 +65,7 @@ const populateDOM = (data) => {
 
 const fetchDataAndUpdate = async () => {
   try {
-    const response = await fetch("data.json");
+    const response = await fetch("./data.json");
     const data = await response.json();
     populateDOM(data);
   } catch (error) {
