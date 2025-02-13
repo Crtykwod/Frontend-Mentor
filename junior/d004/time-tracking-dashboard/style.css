@@ -1,0 +1,316 @@
+/* CSS RESET START */
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css");
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* CSS RESET END */
+
+@font-face {
+  font-family: Rubik;
+  src: url("./assets/fonts/Rubik-VariableFont_wght.ttf") format("truetype");
+}
+
+* {
+  /* Color Scheme: */
+
+    /* Primary: */
+    --clr-blue: hsl(246, 80%, 60%);
+    --clr-light-orange: hsl(15, 100%, 70%); /* work */
+    --clr-soft-blue: hsl(195, 74%, 62%); /* play */
+    --clr-light-red: hsl(348, 100%, 68%); /* study */
+    --clr-lime-green: hsl(145, 58%, 55%); /* exercise */
+    --clr-violet: hsl(264, 64%, 52%); /* social */
+    --clr-soft-yellow: hsl(43, 84%, 65%); /* self care */
+
+    /* Neutral: */
+    --clr-very-dark-blue: hsl(226, 43%, 10%);
+    --clr-dark-blue: hsl(235, 46%, 20%);
+    --clr-desaturated-blue: hsl(235, 45%, 61%);
+    --clr-pale-blue: hsl(236, 100%, 87%);
+
+  /* Typography: */
+
+    /* Font Sizes and Line Heights: */
+    --fs-400: .9375rem;
+    --lh-400: 1.125rem;
+    --fs-500: 1.125rem;
+    --lh-500: 1.3125rem;
+    --fs-600: clamp(1.5rem, 1rem + 1.5023vw, 2.5rem);
+    --lh-600: clamp(1.75rem, 1.3319rem + 1.784vw, 2.9375rem);
+    --fs-700: clamp(2rem, 1rem + 2.2535vw, 3.5rem);
+    --lh-700: clamp(2.375rem, 1.7588rem + 2.6291vw, 4.125rem);
+
+    /* Font Family: */
+    --ff: "Rubik", sans-serif;
+
+  
+  --txt-sm: 400 var(--fs-400)/var(--lh-400) var(--ff);
+  --txt-md: 400 var(--fs-500)/var(--lh-500) var(--ff);
+  --txt-md-bold: 500 var(--fs-500)/var(--lh-500) var(--ff);
+  --txt-lg: 300 var(--fs-600)/var(--lh-600) var(--ff);
+  --txt-xl: 300 var(--fs-700)/var(--lh-700) var(--ff);
+}
+
+/* Mobile Design */
+
+body {
+  font: var(--txt-sm);
+  color: var(--clr-pale-blue);
+  background: var(--clr-very-dark-blue);
+  display: grid;
+  gap: 1.5rem;
+  padding-block: 5rem;
+  width: max(360px, 90%);
+  margin: auto;
+  min-height: 100svh;
+}
+
+.menu {
+  background: var(--clr-dark-blue);
+  border-radius: 1rem;
+  
+}
+
+.profile {
+  background: var(--clr-blue);
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+  padding-block: 2.125rem;
+}
+
+.profile img {
+  width: clamp(4rem, 3.6919rem + 1.3146vw, 4.875rem);
+}
+
+.name {
+  display: block;
+  font: var(--txt-lg);
+  color: white;
+}
+
+.content-section {
+  font: var(--txt-md);
+  display: flex;
+  justify-content: space-evenly;
+  padding-block: 1.5rem;
+}
+
+.content-section a {
+  text-decoration: none;
+  color: var(--clr-pale-blue);
+}
+
+.content-section a:hover, .content-section a.active {
+  color: white;
+}
+
+main {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.timer-card {
+  display: grid;
+  position: relative;
+}
+
+.timer-background {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  background: var(--clr-background, hsl(0, 0%, 50%));
+  background-image: var(--bg-image, url("./assets/images/icon-general.svg"));
+  background-repeat: no-repeat;
+  background-position: right top;
+  border-radius: 1rem 1rem 0 0;
+  z-index: -1;
+
+  &.work {
+    --clr-background: var(--clr-light-orange);
+    --bg-image: url("./assets/images/icon-work.svg");
+  }
+
+  &.play {
+    --clr-background: var(--clr-soft-blue);
+    --bg-image: url("./assets/images/icon-play.svg");
+  }
+
+  &.study {
+    --clr-background: var(--clr-light-red);
+    --bg-image: url("./assets/images/icon-study.svg");
+  }
+
+  &.exercise {
+    --clr-background: var(--clr-lime-green);
+    --bg-image: url("./assets/images/icon-exercise.svg");
+  }
+
+  &.social {
+    --clr-background: var(--clr-violet);
+    --bg-image: url("./assets/images/icon-social.svg");
+  }
+
+  &.self.care {
+    --clr-background: var(--clr-soft-yellow);
+    --bg-image: url("./assets/images/icon-self-care.svg");
+  }
+}
+
+.timer-content {
+  display: grid;
+  gap: 6px;
+  grid-template-columns: repeat(2, 1fr);
+  background: var(--clr-dark-blue);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-top: 2.375rem;
+
+  &:hover {
+    background-color: hsl(235, 41%, 34%);
+  }
+}
+
+.timer-content h2 {
+  font: var(--txt-md-bold);
+  color: white;
+}
+
+.button-edit {
+  background: none;
+  border: none;
+  justify-self: end;
+  align-self: start;
+  cursor: pointer;
+
+  &:focus {
+    outline: 2px solid var(--clr-pale-blue);
+    border-radius: .25rem;
+  }
+
+  &:hover {
+    svg {
+      scale: 1.1;
+    }
+  }
+
+  svg {
+    outline: none;
+    transition: transform 300ms linear;
+  }
+}
+
+.time-container {
+  grid-column: span 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.time-current {
+  font: var(--txt-xl);
+  color: white;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+@media screen and (min-width: 64rem) {
+  body {
+    grid-template-columns: repeat(4, 1fr);
+    align-content: center;
+  }
+
+  main {
+    grid-column: span 3;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .profile {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem;
+    padding-bottom: 5rem;
+    gap: 1.5rem;
+  }
+
+  .content-section {
+    flex-direction: column;
+    align-content: space-between;
+    padding-block: 2rem;
+    padding-inline: 2rem;
+    gap: 1.5rem;
+  }
+
+  .timer-content {
+    gap: 1.25rem;
+    padding-inline: 1.875rem;
+    padding-block: 32px;
+  }
+
+  .time-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
