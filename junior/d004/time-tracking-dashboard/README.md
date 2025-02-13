@@ -27,12 +27,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![screenshot](./assets/images/screenshot.png)
 
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://crtykwod.github.io/](https://crtykwod.github.io/Frontend-Mentor/junior/d004/time-tracking-dashboard/index.html)
 
 ## My Process
 
@@ -103,6 +103,5 @@ In the future, I plan to continue exploring and improving my skills in:
 
 ## Author
 
-- Website - [Your Name](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- GitHub - [Carlos Samuel](https://github.com/Crtykwod)
+- Frontend Mentor - [@Crtykwod](https://www.frontendmentor.io/profile/Crtykwod)
