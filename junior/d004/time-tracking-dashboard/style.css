@@ -74,7 +74,7 @@ table {
     /* Neutral: */
     --clr-very-dark-blue: hsl(226, 43%, 10%);
     --clr-dark-blue: hsl(235, 46%, 20%);
-    --clr-desaturated-blue: hsl(235, 45%, 61%);
+    --clr-desaturated-blue: hsl(235, 45%, 62%);
     --clr-pale-blue: hsl(236, 100%, 87%);
 
   /* Typography: */
@@ -133,6 +133,8 @@ body {
 
 .profile img {
   width: clamp(4rem, 3.6919rem + 1.3146vw, 4.875rem);
+  border: 3px solid white;
+  border-radius: 50%;
 }
 
 .name {
@@ -150,7 +152,7 @@ body {
 
 .content-section a {
   text-decoration: none;
-  color: var(--clr-pale-blue);
+  color: var(--clr-desaturated-blue);
 }
 
 .content-section a:hover, .content-section a.active {
@@ -293,7 +295,7 @@ main {
     align-items: flex-start;
     padding: 2rem;
     padding-bottom: 5rem;
-    gap: 1.5rem;
+    gap: 2.625rem;
   }
 
   .content-section {
