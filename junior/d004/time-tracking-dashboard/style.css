@@ -109,7 +109,8 @@ body {
   display: grid;
   gap: 1.5rem;
   padding-block: 5rem;
-  width: max(360px, 90%);
+  width: 90%;
+  max-width: 90rem;
   margin: auto;
   min-height: 100svh;
 }
