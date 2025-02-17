@@ -15,7 +15,7 @@
   <body>
     <aside class="menu">
       <div class="profile">
-        <img src="assets/images/image-jeremy.png" alt="Profile Picture">
+        <img src="assets/images/image-jeremy.png" alt="Profile Picture" />
         <h1>Report for <span class="name">Jeremy Robson</span></h1>
       </div>
       <ul class="content-section">
@@ -24,15 +24,35 @@
         <li><a href="#monthly">Monthly</a></li>
       </ul>
     </aside>
-    <main id="main">
-      
-    </main>
+    <main id="main"></main>
+    <dialog id="errorDialog">
+      <p id="errorMessage">An error occurred.</p>
+      <div class="dialog-button__container">
+        <button class="dialog-button" id="retryButton">Retry</button>
+        <button class="dialog-button button__close">Close</button>
+      </div>
+    </dialog>
+
+    <div id="popup" class="popup">
+      <button id="helloWorld" class="popup-button">Olá, Mundo!</button>
+      <button id="deleteButton" class="delete-button popup-button">
+        Delete Card
+      </button>
+    </div>
+
+    <dialog id="confirmDialog">
+      <p>Are you sure you want to delete this card?</p>
+      <div class="dialog-button__container">
+        <button id="confirmDelete" class="dialog-button">Yes, Delete</button>
+        <button class="button__close dialog-button">No, Cancel</button>
+      </div>
+    </dialog>
 
     <!-- <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
+      >. Coded by <a href="https://github.com/Crtykwod">Carlos Samuel</a>.
     </div> -->
 
     <script src="script.js"></script>
