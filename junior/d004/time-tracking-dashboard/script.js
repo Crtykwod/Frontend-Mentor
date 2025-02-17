@@ -9,11 +9,11 @@ let activeButton = null;
 let activeCard = null;
 
 // Time Period Configuration
-const getTimeLabel = {
+const getTimeLabel = () => ({
   daily: "Yesterday",
   weekly: "Last Week",
   monthly: "Last Month",
-}[timePeriod];
+}[timePeriod]);
 
 const updateTimePeriod = (id) => {
   timePeriod = id;
@@ -41,7 +41,7 @@ const createTimeCard = (item) => {
       </button>
       <div class="time-container">
         <p class="time-current">${formattedCurrentHours}</p>
-        <p class="time-previous">${getTimeLabel} - ${formattedPreviousHours}</p>
+        <p class="time-previous">${getTimeLabel()} - ${formattedPreviousHours}</p>
       </div>
     </div>
   `;
