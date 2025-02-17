@@ -9,11 +9,12 @@ let activeButton = null;
 let activeCard = null;
 
 // Time Period Configuration
-const getTimeLabel = () => ({
-  daily: "Yesterday",
-  weekly: "Last Week",
-  monthly: "Last Month",
-}[timePeriod]);
+const getTimeLabel = () => (
+  {
+    daily: "Yesterday",
+    weekly: "Last Week",
+    monthly: "Last Month",
+  })[timePeriod];
 
 const updateTimePeriod = (id) => {
   timePeriod = id;
