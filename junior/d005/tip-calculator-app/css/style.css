@@ -62,13 +62,13 @@ main {
   gap: 1rem;
 }
 
-.calculator__legend {
-  margin-bottom: 1rem;
-}
-
-.calculator__label {
+.calculator__label, .calculator__legend {
   display: flex;
   margin-bottom: .375rem;
+}
+
+.calculator__legend {
+  margin-bottom: 1rem;
 }
 
 .calculator__field {
@@ -224,6 +224,10 @@ input[type="radio"] {
 
   .calculator__options {
     grid-template-columns: repeat(auto-fit, minmax(7.3125rem, 1fr));
+  }
+
+  .results__amount {
+    font-size: 3rem;
   }
 
   #resetButton {
