@@ -1,0 +1,220 @@
+@font-face {
+  font-family: 'Space Mono';
+  src: url(../assets/fonts/SpaceMono-Bold.ttf) format('truetype');
+  font-weight: 700;
+}
+
+:root {
+  /* Primary */
+  --strong-cyan: hsl(172, 67%, 45%);
+
+  /* Neutral */
+  --very-dark-cyan: hsl(183, 100%, 15%);
+  --dark-grayish-cyan: hsl(186, 14%, 43%);
+  --grayish-cyan: hsl(184, 14%, 56%);
+  --light-grayish-cyan: hsl(185, 41%, 84%);
+  --very-light-grayish-cyan: hsl(189, 41%, 97%);
+  --white: hsl(0, 0%, 100%);
+
+  /* Typography */
+  --fs-input: 1.5rem;
+  --fs-md: 1rem;
+  --fs-sm: .8125rem;
+
+  --font-family: 'Space Mono', monospace;
+}
+
+body {
+  font: var(--fs-md)/1.5 var(--font-family);
+  color: var(--dark-grayish-cyan);
+  background-color: var(--light-grayish-cyan);
+  text-align: center;
+  display: grid;
+  justify-items: center;
+  align-items: start;
+  min-height: 100vh;
+  margin-top: 3.125rem;
+  gap: 2.5rem;
+}
+
+header {
+  align-self: end;
+}
+
+main {
+  background-color: var(--white);
+  border-radius: 1.5rem 1.5rem 0 0;
+  padding: 2rem;
+  width: clamp(20rem, 80%, 57.5rem);
+  min-width: min(25rem, 100%);
+  display: grid;
+  gap: 2rem;
+}
+
+form {
+  display: grid;
+  gap: 2rem;
+}
+
+fieldset {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+}
+
+legend {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: flex;
+  margin-bottom: .375rem;
+}
+
+input {
+  font: var(--fs-input)/1.5 var(--font-family);
+  color: var(--very-dark-cyan);
+  border: none;
+}
+
+input:focus, .labelRadio:focus, .labelRadio:hover, #optCustom:hover {
+outline: 3px solid var(--strong-cyan);
+
+}
+
+input::placeholder {
+  color: var(--dark-grayish-cyan);
+}
+
+input[type="number"], input[type="text"] {
+  background-color: var(--very-light-grayish-cyan);
+  border-radius: .5rem;
+  padding: .5rem 1rem;
+  width: 100%;
+  text-align: right;
+  background-repeat: no-repeat;
+  background-position: left 1.125rem center;
+}
+
+#bill {
+  background-image: url(../assets/images/icon-dollar.svg);
+}
+
+#people {
+  background-image: url(../assets/images/icon-person.svg);
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.labelRadio{
+  font: var(--fs-input)/1.5 var(--font-family);
+  color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--very-dark-cyan);
+  border-radius: .5rem;
+  padding: .5rem 1rem;
+  cursor: pointer;
+}
+
+.labelRadio:has(input:checked) {
+  background-color: var(--strong-cyan);
+  box-shadow: inset 999px 999px 0px 0px #ffffff5e;
+  color: var(--very-dark-cyan);
+}
+
+.labelRadio, #optCustom {
+  max-height: 3rem;
+  width: 100%;
+}
+
+#result {
+  background-color: var(--very-dark-cyan);
+  color: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  display: grid;
+  gap: 1.5rem;
+  overflow: hidden;
+}
+
+.result-container {
+  display: grid;
+  gap: 1.25rem;
+  margin-top: .5rem;
+
+}
+
+.result_amount {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  flex-wrap: wrap;
+}
+
+.result_text p {
+  font-size: var(--fs-sm);
+  text-align: left;
+  color: var(--grayish-cyan);
+}
+
+/* Gambiarra */
+.result_amount:last-child .result_text {
+  min-width: 88px;
+}
+
+.result-total {
+  font: 2rem/1.5 var(--font-family);
+  color: var(--strong-cyan);
+}
+
+.result-total::before {
+  content: '$';
+}
+
+#resetButton {
+  text-transform: uppercase;
+  background-color: var(--strong-cyan);
+  font-size: 1.25rem;
+  color: var(--very-dark-cyan);
+  border-radius: .25rem;
+  padding: .625rem 2rem;
+  cursor: pointer;
+  border: none;
+}
+
+#resetButton:hover {
+  box-shadow: inset 999px 999px 0px 0px #ffffff5e;
+}
+
+
+@media screen and (min-width: 48rem) {
+  fieldset {
+    grid-template-columns: repeat(auto-fit, minmax(11.25rem, 1fr));
+  }
+} 
+
+@media screen and (min-width: 65rem) {
+
+  body {
+    margin-top: 0;
+    gap: 5.5rem;
+  }
+  main {
+    grid-template-columns: 1fr 1fr;
+    height: fit-content;
+    border-radius: 1.5rem;;
+  }
+
+  fieldset {
+    grid-template-columns: repeat(auto-fit, minmax(7.3125rem, 1fr));
+  }
+
+  #resetButton {
+    align-self: end;
+  }
+}
