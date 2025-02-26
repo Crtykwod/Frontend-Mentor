@@ -24,11 +24,12 @@
     </header>
 
     <main>
-      <section>
-        <form id="billCalculator" action="">
-          <section>
-            <label for="bill">Bill</label>
+      <section class="calculator">
+        <form class="calculator__form" id="billCalculator">
+          <section class="calculator__group">
+            <label class="calculator__label" for="bill">Bill</label>
             <input
+              class="calculator__field calculator__field--bill"
               type="text"
               id="bill"
               value="0.00"
@@ -38,10 +39,10 @@
             />
           </section>
 
-          <section>
-            <fieldset>
-              <legend>Select Tip %</legend>
-              <label class="labelRadio" for="opt5" tabindex="0">
+          <section class="calculator__group">
+            <fieldset class="calculator__options">
+              <legend class="calculator__legend">Select Tip %</legend>
+              <label class="calculator__field calculator__field--radio" for="opt5" tabindex="0">
                 <input
                   type="radio"
                   name="options"
@@ -50,7 +51,7 @@
                   aria-label="5 percent tip"
                 /> 5%
               </label>
-              <label class="labelRadio" for="opt10" tabindex="0">
+              <label class="calculator__field calculator__field--radio" for="opt10" tabindex="0">
                 <input
                   type="radio"
                   name="options"
@@ -59,7 +60,7 @@
                   aria-label="10 percent tip"
                 /> 10%
               </label>
-              <label class="labelRadio" for="opt15" tabindex="0">
+              <label class="calculator__field calculator__field--radio" for="opt15" tabindex="0">
                 <input
                   type="radio"
                   name="options"
@@ -68,7 +69,7 @@
                   aria-label="15 percent tip"
                 /> 15%
               </label>
-              <label class="labelRadio" for="opt25" tabindex="0">
+              <label class="calculator__field calculator__field--radio" for="opt25" tabindex="0">
                 <input
                   type="radio"
                   name="options"
@@ -77,7 +78,7 @@
                   aria-label="25 percent tip"
                 /> 25%
               </label>
-              <label class="labelRadio" for="opt50" tabindex="0">
+              <label class="calculator__field calculator__field--radio" for="opt50" tabindex="0">
                 <input
                   type="radio"
                   name="options"
@@ -87,6 +88,7 @@
                 /> 50%
               </label>
               <input
+                class="calculator__field calculator__field--custom"
                 type="text"
                 name="options"
                 id="optCustom"
@@ -97,28 +99,28 @@
             </fieldset>
           </section>
 
-          <section>
-            <label for="people">Number of People</label>
-            <input type="number" id="people" placeholder="0" min="1" step="1" aria-label="Number of people" aria-describedby="people-error"/>
+          <section class="calculator__group">
+            <label class="calculator__label" for="people">Number of People</label>
+            <input class="calculator__field calculator__field--people" type="number" id="people" placeholder="0" min="1" step="1" aria-label="Number of people" aria-describedby="people-error"/>
           </section>
         </form>
       </section>
 
-      <section id="result">
-        <section class="result-container">
-          <section class="result_amount">
-            <div class="result_text">
-              <h2>Tip Amount</h2>
-              <p>/ person</p>
+      <section class="results" id="result">
+        <section class="results__container">
+          <section class="results__group">
+            <div class="results__header">
+              <h2 class="results__title">Tip Amount</h2>
+              <p class="results__subtitle">/ person</p>
             </div>
-            <p class="result-total" id="tipAmount">0.00</p>
+            <p class="results__amount" id="tipAmount">0.00</p>
           </section>
-          <section class="result_amount">
-            <div class="result_text">
-              <h2>Total</h2>
-              <p>/ person</p>
+          <section class="results__group">
+            <div class="results__header">
+              <h2 class="results__title">Total</h2>
+              <p class="results__subtitle">/ person</p>
             </div>
-            <p class="result-total" id="totalAmount">0.00</p>
+            <p class="results__amount" id="totalAmount">0.00</p>
           </section>
         </section>
 

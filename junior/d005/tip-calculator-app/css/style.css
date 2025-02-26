@@ -51,42 +51,42 @@ main {
   gap: 2rem;
 }
 
-form {
+.calculator__form {
   display: grid;
   gap: 2rem;
 }
 
-fieldset {
+.calculator__options {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   gap: 1rem;
 }
 
-legend {
+.calculator__legend {
   margin-bottom: 1rem;
 }
 
-label {
+.calculator__label {
   display: flex;
   margin-bottom: .375rem;
 }
 
-input {
+.calculator__field {
   font: var(--fs-input)/1.5 var(--font-family);
   color: var(--very-dark-cyan);
   border: none;
 }
 
-input:focus, .labelRadio:focus, .labelRadio:hover, #optCustom:hover {
+.calculator__field:focus, .calculator__field--radio:focus, .calculator__field--radio:hover, .calculator__field--custom:hover {  
 outline: 3px solid var(--strong-cyan);
 
 }
 
-input::placeholder {
+.calculator__field::placeholder {
   color: var(--dark-grayish-cyan);
 }
 
-input[type="number"], input[type="text"] {
+.calculator__field--bill, .calculator__field--people, .calculator__field--custom {
   background-color: var(--very-light-grayish-cyan);
   border-radius: .5rem;
   padding: .5rem 1rem;
@@ -96,11 +96,11 @@ input[type="number"], input[type="text"] {
   background-position: left 1.125rem center;
 }
 
-#bill {
+.calculator__field--bill {
   background-image: url(../assets/images/icon-dollar.svg);
 }
 
-#people {
+.calculator__field--people {
   background-image: url(../assets/images/icon-person.svg);
 }
 
@@ -108,7 +108,7 @@ input[type="radio"] {
   display: none;
 }
 
-.labelRadio{
+.calculator__field--radio {
   font: var(--fs-input)/1.5 var(--font-family);
   color: var(--white);
   display: flex;
@@ -120,18 +120,18 @@ input[type="radio"] {
   cursor: pointer;
 }
 
-.labelRadio:has(input:checked) {
+.calculator__field--radio:has(input:checked) {
   background-color: var(--strong-cyan);
   box-shadow: inset 999px 999px 0px 0px #ffffff5e;
   color: var(--very-dark-cyan);
 }
 
-.labelRadio, #optCustom {
+.calculator__field--radio, .calculator__field--custom {
   max-height: 3rem;
   width: 100%;
 }
 
-#result {
+.results {
   background-color: var(--very-dark-cyan);
   color: white;
   border-radius: 1rem;
@@ -141,14 +141,14 @@ input[type="radio"] {
   overflow: hidden;
 }
 
-.result-container {
+.results__container {
   display: grid;
   gap: 1.25rem;
   margin-top: .5rem;
 
 }
 
-.result_amount {
+.results__group {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -156,23 +156,23 @@ input[type="radio"] {
   flex-wrap: wrap;
 }
 
-.result_text p {
+.results__subtitle {
   font-size: var(--fs-sm);
   text-align: left;
   color: var(--grayish-cyan);
 }
 
 /* Gambiarra */
-.result_amount:last-child .result_text {
+.results__group:last-child .results__header {
   min-width: 88px;
 }
 
-.result-total {
+.results__amount {
   font: 2rem/1.5 var(--font-family);
   color: var(--strong-cyan);
 }
 
-.result-total::before {
+.results__amount::before {
   content: '$';
 }
 
@@ -222,7 +222,7 @@ input[type="radio"] {
     border-radius: 1.5rem;;
   }
 
-  fieldset {
+  .calculator__options {
     grid-template-columns: repeat(auto-fit, minmax(7.3125rem, 1fr));
   }
 
