@@ -191,6 +191,18 @@ input[type="radio"] {
   box-shadow: inset 999px 999px 0px 0px #ffffff5e;
 }
 
+.error, .error::placeholder, .error:hover, .error:focus {
+  border: 3px solid #E17457 !important;
+  outline: none !important;
+  position: relative;
+}
+
+.error-message {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #E17457;
+}
 
 @media screen and (min-width: 48rem) {
   fieldset {

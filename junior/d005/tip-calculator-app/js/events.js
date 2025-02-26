@@ -1,13 +1,13 @@
 import { billInput, form, numberInputs, peopleInput, resetButton, tipAmount, tipInputCustom, tipInputCustomRadio, tipInputRadio, totalAmount } from "./constants.js";
 import { showErrorMessage } from "./form-handler.js";
-import { formatCurrency, formatNumber } from "./formatting.js";
+import { formatters } from "./utils.js";
 
 export const setupEventListeners = () => {
+  billInput.addEventListener("input", () => formatters.currency(billInput));
+  numberInputs.forEach((input) => input.addEventListener("input", () => formatters.percentage(input)));
 
-  billInput.addEventListener("input", () => formatCurrency(billInput));
   billInput.addEventListener("input", () => showErrorMessage(billInput));
   peopleInput.addEventListener("input", () => showErrorMessage(peopleInput));
-  numberInputs.forEach((input) => input.addEventListener("input", () => formatNumber(input)));
 
   billInput.addEventListener("focus", () => {
       setTimeout(() => billInput.setSelectionRange(billInput.value.length, billInput.value.length), 0);
@@ -25,15 +25,17 @@ export const setupEventListeners = () => {
     }
   });
 
-  tipInputRadio.forEach((radio) => radio.addEventListener("click", () => {
-    tipInputCustom.value = "";
-  }));
+  let lastChecked = null;
 
-  tipInputRadio.forEach((radio) => radio.addEventListener("keydown", (e) => {
-    if (e.key === "Space") {
-      e.preventDefault();
-      tipInputCustom.focus();
+  tipInputRadio.forEach((radio) => radio.addEventListener("click", () => {
+    if (lastChecked === radio) {
+      radio.checked = false;
+      lastChecked = null;
+      form.dispatchEvent(new Event('input'));
+    } else {
+      lastChecked = radio;
     }
+    tipInputCustom.value = "";
   }));
 
   resetButton.addEventListener("click", () => {

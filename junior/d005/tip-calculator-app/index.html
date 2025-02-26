@@ -28,40 +28,78 @@
         <form id="billCalculator" action="">
           <section>
             <label for="bill">Bill</label>
-            <input type="text" id="bill" value="0.00" />
+            <input
+              type="text"
+              id="bill"
+              value="0.00"
+              aria-label="Bill amount"
+              aria-required="true"
+              aria-describedby="bill-error"
+            />
           </section>
 
           <section>
             <fieldset>
               <legend>Select Tip %</legend>
               <label class="labelRadio" for="opt5" tabindex="0">
-                <input type="radio" name="options" id="opt5" value="5" /> 5%
+                <input
+                  type="radio"
+                  name="options"
+                  id="opt5"
+                  value="5"
+                  aria-label="5 percent tip"
+                /> 5%
               </label>
               <label class="labelRadio" for="opt10" tabindex="0">
-                <input type="radio" name="options" id="opt10" value="10" /> 10%
+                <input
+                  type="radio"
+                  name="options"
+                  id="opt10"
+                  value="10"
+                  aria-label="10 percent tip"
+                /> 10%
               </label>
               <label class="labelRadio" for="opt15" tabindex="0">
-                <input type="radio" name="options" id="opt15" value="15" /> 15%
+                <input
+                  type="radio"
+                  name="options"
+                  id="opt15"
+                  value="15"
+                  aria-label="15 percent tip"
+                /> 15%
               </label>
               <label class="labelRadio" for="opt25" tabindex="0">
-                <input type="radio" name="options" id="opt25" value="25" /> 25%
+                <input
+                  type="radio"
+                  name="options"
+                  id="opt25"
+                  value="25"
+                  aria-label="25 percent tip"
+                /> 25%
               </label>
               <label class="labelRadio" for="opt50" tabindex="0">
-                <input type="radio" name="options" id="opt50" value="50" /> 50%
+                <input
+                  type="radio"
+                  name="options"
+                  id="opt50"
+                  value="50"
+                  aria-label="50 percent tip"
+                /> 50%
               </label>
               <input
                 type="text"
                 name="options"
                 id="optCustom"
                 placeholder="Custom"
+                aria-label="Custom tip"
               />
-              <input type="radio" name="options" id="optCustomRadio">
+              <input type="radio" name="options" id="optCustomRadio" />
             </fieldset>
           </section>
 
           <section>
             <label for="people">Number of People</label>
-            <input type="number" id="people" placeholder="0" min="1" step="1" />
+            <input type="number" id="people" placeholder="0" min="1" step="1" aria-label="Number of people" aria-describedby="people-error"/>
           </section>
         </form>
       </section>

@@ -4,7 +4,6 @@ export const peopleInput = document.getElementById("people");
 export const tipInputCustom = document.getElementById("optCustom");
 export const tipInputCustomRadio = document.getElementById("optCustomRadio");
 export const tipInputRadio = document.querySelectorAll("input[name='options']");
-export const checkedRadio = document.querySelector('input[name="options"]:checked');
 
 export const numberInputs = [peopleInput, tipInputCustom];
 

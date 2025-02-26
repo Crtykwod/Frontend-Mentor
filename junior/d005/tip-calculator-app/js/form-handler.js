@@ -1,11 +1,26 @@
 import { billInput, form, peopleInput, tipAmount, tipInputCustom, tipInputCustomRadio, tipInputRadio, totalAmount } from "./constants.js";
-import { formatCurrency } from "./formatting.js";
+import { validateBill, validatePeople } from "./validation.js";
+import { formatters, calculations, debounce } from "./utils.js";
 
 export const showErrorMessage = (input) => {
-  if (input.value < 1 || !input) {
-    input.classList.add("error");
+  const validation = input === billInput ? validateBill(input) : validatePeople(input);
+  
+  if (validation.isValid) {
+    let errorMessage = input.parentNode.querySelector(".error-message");
+    if (errorMessage) {
+      input.parentNode.removeChild(errorMessage);
+      input.classList.remove("error");
+    }
+    return;
   }
-  input.addEventListener("input", () => input.classList.remove("error"));
+
+  let errorMessage = document.createElement("span");
+  errorMessage.classList.add("error-message");
+  errorMessage.textContent = validation.errorMessage;
+
+  input.parentNode.style.position = "relative";
+  input.parentNode.appendChild(errorMessage);
+  input.classList.add("error");
 }
 
 const getTipValue = () => {
@@ -18,25 +33,19 @@ const getTipValue = () => {
 }
 
 export const handleSubmit = () => {
-  form.addEventListener("input", () => {
-    const bill = formatCurrency(billInput);
+  const calculateResults = debounce(() => {
+    const bill = Number(billInput.value.replace(/,/g, ''));
     const people = Number(peopleInput.value);
     const tip = getTipValue();
-    let tipAmountValue = 0;
-    let totalAmountValue = 0;
 
     if (people < 1) return;
 
-    totalAmountValue = Number((bill / people).toFixed(2));
+    const tipAmountValue = calculations.tipAmount(bill, people, tip);
+    const totalAmountValue = calculations.totalPerPerson(bill, people, tip);
 
-    if (tip) {
-      totalAmountValue *= (1 + tip);
-      tipAmountValue = Number(((bill * tip) / people).toFixed(2));
-    }
+    tipAmount.textContent = formatters.currency(tipAmountValue);
+    totalAmount.textContent = formatters.currency(totalAmountValue);
+  }, 150);
 
-    tipAmount.textContent = formatCurrency(tipAmountValue) || "0,00";
-    totalAmount.textContent = formatCurrency(totalAmountValue) || "0,00";
-
-    console.log(bill, people, tip, totalAmountValue, tipAmountValue);
-  });
+  form.addEventListener("input", calculateResults);
 };
