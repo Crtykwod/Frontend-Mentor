@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A secure password generator application that creates strong passwords based on your preferences" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Password generator app</title>
+    <link rel="stylesheet" href="./css/css-reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <main class="password-generator">
+      <h1 class="password-generator__title">Password Generator</h1>
+
+      <div class="password-display" role="region" aria-label="Generated password display">
+        <p class="password-display__text" id="password" aria-live="polite">P4$5W0rD!</p>
+        <div class="password-display__copy_container">
+          <p class="password-display__copied" id="copyStatusMessage" aria-live="polite">Copied</p>
+          <button aria-label="Copy password to clipboard" class="password-display__copy-btn" id="copyButton" disabled>
+            <svg
+              width="21"
+              height="24"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path
+                d="M20.341 3.091 17.909.659A2.25 2.25 0 0 0 16.319 0H8.25A2.25 2.25 0 0 0 6 2.25V4.5H2.25A2.25 2.25 0 0 0 0 6.75v15A2.25 2.25 0 0 0 2.25 24h10.5A2.25 2.25 0 0 0 15 21.75V19.5h3.75A2.25 2.25 0 0 0 21 17.25V4.682a2.25 2.25 0 0 0-.659-1.591ZM12.469 21.75H2.53a.281.281 0 0 1-.281-.281V7.03a.281.281 0 0 1 .281-.281H6v10.5a2.25 2.25 0 0 0 2.25 2.25h4.5v1.969a.282.282 0 0 1-.281.281Zm6-4.5H8.53a.281.281 0 0 1-.281-.281V2.53a.281.281 0 0 1 .281-.281H13.5v4.125c0 .621.504 1.125 1.125 1.125h4.125v9.469a.282.282 0 0 1-.281.281Zm.281-12h-3v-3h.451c.075 0 .147.03.2.082L18.667 4.6a.283.283 0 0 1 .082.199v.451Z"
+              />
+            </svg>
+            <span class="sr-only">Copy</span>
+          </button>
+        </div>
+      </div>
+
+      <form class="password-generator__form" id="form" role="form" aria-label="Password generation options">
+        <div class="length-control">
+          <div class="length-control__header">
+            <label class="length-control__label" for="passwordLength">Character Length</label>
+            <p class="length-control__value" id="passwordLengthValue" aria-live="polite">10</p>
+          </div>
+          <input class="length-control__slider" type="range" name="passwordLength" id="passwordLength" min="1" max="20" value="10" aria-valuemin="1" aria-valuemax="20" aria-valuenow="10"/>
+        </div>
+        <fieldset class="options">
+          <legend class="sr-only">Password character options</legend>
+          <label class="options__item">
+            <input class="options__checkbox" type="checkbox" name="hasUppercase" id="hasUppercase"/>
+            Include Uppercase Letters
+          </label>
+          <label class="options__item">
+            <input class="options__checkbox" type="checkbox" name="hasLowercase" id="hasLowercase"/>
+            Include Lowercase Letters
+          </label>
+          <label class="options__item">
+            <input class="options__checkbox" type="checkbox" name="hasNumbers" id="hasNumbers"/>
+            Include Numbers
+          </label>
+          <label class="options__item">
+            <input class="options__checkbox" type="checkbox" name="hasSymbols" id="hasSymbols"/>
+            Include Symbols
+          </label>
+        </fieldset>
+        <div class="strength" role="region" aria-label="Password strength indicator">
+          <p class="strength__label">Strength</p>
+          <div class="strength__meter">
+            <p class="strength__value" id="strengthValue" aria-live="polite"></p>
+            <div class="strength__indicator" id="strengthIndicator" role="progressbar" aria-label="Password strength bars">
+              <div class="strength__bar"></div>
+              <div class="strength__bar"></div>
+              <div class="strength__bar"></div>
+              <div class="strength__bar"></div>
+            </div>
+          </div>
+        </div>
+        <button class="generate-btn" id="generateButton" disabled type="submit">
+          Generate
+          <svg
+            width="12"
+            height="12"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <path
+              d="m5.106 12 6-6-6-6-1.265 1.265 3.841 3.84H.001v1.79h7.681l-3.841 3.84z"
+            />
+          </svg>
+        </button>
+      </form>
+    </main>
+    <div id="notificationContainer" class="notification__container" role="alert" aria-live="polite">
+    </div>
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>
