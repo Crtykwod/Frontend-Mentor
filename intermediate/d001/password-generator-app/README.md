@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Screenshot
 
-![unactive-state screenshot](./assets/screenshots/unactive-state.png)
+![inactive-state screenshot](./assets/screenshots/unactive-state.png)
 ![password generated screenshot](./assets/screenshots/generated-and-notification.png)
 
 ### Links
