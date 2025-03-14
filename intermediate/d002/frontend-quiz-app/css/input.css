@@ -199,8 +199,12 @@
         position: absolute;
         top: 0;
         right: 0;
-        background-color: var(--color-navy);
         mask: linear-gradient(to left, black 50%, transparent);
+        background: var(--color-pure-white);   
+      }
+
+      [data-theme="dark"] &::before {
+        background: var(--color-navy);
       }
 
       .quiz__icon--letter {
@@ -234,13 +238,17 @@
       position: absolute;
       top: 0;
       right: 0;
-      background-color: var(--color-navy);
       mask: linear-gradient(to left, black 50%, transparent);
+      background: var(--color-pure-white);      
+    }
+
+    [data-theme="dark"] &::before {
+      background: var(--color-navy);
     }
   }
 
   .quiz__icon {
-    @apply p-1 rounded-md size-[clamp(2.5rem,_1.5458rem_+_4.0712vw,_3.5rem)];
+    @apply p-1 rounded-md size-[clamp(2.5rem,_1.5458rem_+_4.0712vw,_3.5rem)] shrink-0;
   }
 
   .quiz__icon--letter {

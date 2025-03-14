@@ -270,21 +270,19 @@
          <p>You scored...</p>
       </div>
       <div class="flex flex-col gap-6 p-8 md:p-12 rounded-xl md:rounded-3xl bg-pure-white dark:bg-navy">
-        <div class="grid justify-center gap-4">
-          <div class="flex items-center gap-4">
-            <img class="quiz__icon" src="./assets/images/icon-accessibility.svg">
-            <h2 id="quizTitleResults" class="text-heading-m">Accessibility</h2>
-          </div>
-          
-          <div class="grid justify-center">
-            <p id="scoreDisplay" class="text-display">8</p>
-            <p class="text-body-m text-gray-navy dark:text-light-bluish">out of 10</p>
-          </div>
+        <div class="flex justify-center text-center items-center gap-4">
+          <img class="quiz__icon" src="./assets/images/icon-accessibility.svg">
+          <h2 id="quizTitleResults" class="text-heading-m">Accessibility</h2>
         </div>
-        <button id="playAgainButton" class="bg-purple text-white p-3 rounded-xl hover:cursor-pointer button-hover">
-          Play again
-        </button>
+        
+        <div class="grid justify-center items-center text-center">
+          <p id="scoreDisplay" class="text-display">8</p>
+          <p class="text-body-m text-gray-navy dark:text-light-bluish">out of 10</p>
+        </div>
       </div>
+      <button id="playAgainButton" class="bg-purple text-white p-3 rounded-xl hover:cursor-pointer button-hover">
+        Play again
+      </button>
     </template>
   </body>
 </html>
