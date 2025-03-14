@@ -1,13 +1,18 @@
-import { elements, quizElements } from "./elements.js";
-import { goToNextQuestion, handleOptionClick, submitAnswer } from "./quiz-logic.js";
-import { showResults } from "./results.js";
-import { state } from "./state.js";
-import { setTimesUpEvent } from "./timer.js";
+import {elements, quizElements} from "./elements.js";
+import {
+  goToNextQuestion,
+  handleOptionClick,
+  retryQuestion,
+  submitAnswer,
+} from "./quiz-logic.js";
+import {showResults} from "./results.js";
+import {state} from "./state.js";
+import {setTimesUpEvent} from "./timer.js";
 
 export const createQuiz = (quiz) => {
   const clone = elements.quizTemplate.content.cloneNode(true);
   const question = quiz.questions[state.currentQuestion - 1];
-  
+
   Object.assign(quizElements, {
     submitAnswerButton: clone.getElementById("submitAnswerButton"),
     retryButton: clone.getElementById("retryButton"),
@@ -17,7 +22,8 @@ export const createQuiz = (quiz) => {
     questionText: clone.getElementById("questionText"),
     questionNumber: clone.getElementById("questionNumber"),
     quizOptions: clone.getElementById("quizOptions"),
-    quizAnswers: clone.querySelectorAll(".quiz__answer")
+    quizAnswers: clone.querySelectorAll(".quiz__answer"),
+    noSelectedAnswerMessage: clone.getElementById("noSelectedAnswerMessage"),
   });
 
   quizElements.questionText.textContent = question.question;
@@ -32,7 +38,10 @@ const setupAnswers = (question) => {
   const answers = quizElements.quizAnswers;
   answers.forEach((answer, index) => {
     answer.textContent = question.options[index];
-    const answerClass = question.answer === answer.textContent ? "quiz__answer--correct" : "quiz__answer--incorrect";
+    const answerClass =
+      question.answer === answer.textContent
+        ? "quiz__answer--correct"
+        : "quiz__answer--incorrect";
     answer.classList.add(answerClass);
   });
 };
@@ -45,7 +54,9 @@ const setupQuizEventsListeners = () => {
   quizElements.nextQuestionButton.addEventListener("click", goToNextQuestion);
 
   quizElements.showResultsButton.addEventListener("click", showResults);
-}
+
+  quizElements.retryButton.addEventListener("click", retryQuestion);
+};
 
 export const renderQuiz = (quiz) => {
   elements.main.innerHTML = "";

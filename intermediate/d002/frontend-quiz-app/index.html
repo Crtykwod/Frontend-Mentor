@@ -14,9 +14,9 @@
   </head>
 
   <body
-    class="bg-light-gray dark:bg-dark-navy text-dark-navy dark:text-light-gray font-[501] body-background min-h-[100svh] text-heading-s"
+    class="bg-light-gray dark:bg-dark-navy text-dark-navy dark:text-light-gray font-[501] body-background min-h-[100svh] text-heading-s flex flex-col"
   >
-    <header id="header" class="px-6 py-4 flex justify-between">
+    <header id="header" class="px-6 py-4 flex justify-between h-fit">
       <div id="headerContent" class="flex items-center gap-4 invisible">
         <button id="returnToMenu" class="hover:cursor-pointer">
           <svg
@@ -70,8 +70,11 @@
       </div>
     </header>
 
-    <main id="main" class="px-6 py-8 grid gap-10 h-full">
-      <div class="grid gap-4">
+    <main
+      id="main"
+      class="px-6 py-8 m-auto grid md:flex gap-10 h-full w-full md:justify-around max-w-7xl"
+    >
+      <div class="flex flex-col gap-4 grow">
         <div class="text-heading-l">
           <p class="font-light">Welcome to the</p>
           <h1 class="">Frontend Quiz!</h1>
@@ -80,97 +83,106 @@
           Pick a subject to get started.
         </p>
       </div>
-      <ul class="quiz__list">
-        <li>
-          <button id="html" class="menu__button" href="#">
-            <img
-              class="quiz__icon quiz__icon--html"
-              src="./assets/images/icon-html.svg"
-            />
-            HTML
-          </button>
-        </li>
-        <li>
-          <button id="css" class="menu__button" href="#">
-            <img
-              class="quiz__icon quiz__icon--css"
-              src="./assets/images/icon-css.svg"
-            />
-            CSS
-          </button>
-        </li>
-        <li>
-          <button id="javascript" class="menu__button" href="#">
-            <img
-              class="quiz__icon quiz__icon--javascript"
-              src="./assets/images/icon-javascript.svg"
-            />
-            JavaScript
-          </button>
-        </li>
-        <li>
-          <button id="accessibility" class="menu__button" href="#">
-            <img
-              class="quiz__icon quiz__icon--accessibility"
-              src="./assets/images/icon-accessibility.svg"
-            />
-            Accessibility
-          </button>
-        </li>
-      </ul>
-      <div class="grid gap-3 justify-center select-none">
-        <label
-          for="timerCheck"
-          class="flex gap-2 justify-center items-center hover:cursor-pointer"
-        >
-          <input
-            type="checkbox"
-            name="timerCheck"
-            id="timerCheck"
-            class="appearance-none size-6 border-2 rounded border-gray-navy dark:border-light-bluish hover:cursor-pointer hover:border-purple checked:bg-purple checked:border-purple checked:bg-[url('../assets/images/icon-check.svg')] bg-no-repeat bg-center"
-          />
-          <span class="text-2xl">Play with timer?</span>
-        </label>
-        <fieldset id="timerDuration" class="*:*:hidden flex gap-2 invisible">
-          <legend class="sr-only">Select a duration</legend>
-          <label for="duration-10" class="quiz__duration_label">
-            <input
-              class="quiz__duration"
-              type="radio"
-              name="duration"
-              id="duration-10"
-              value="10"
-            />
-            10 seconds
-          </label>
-          <label for="duration-20" class="quiz__duration_label">
-            <input
-              class="quiz__duration"
-              type="radio"
-              name="duration"
-              id="duration-20"
-              value="20"
-            />
-            20 seconds
-          </label>
-          <label for="duration-30" class="quiz__duration_label">
-            <input
-              class="quiz__duration"
-              type="radio"
-              name="duration"
-              id="duration-30"
-              value="30"
-            />
-            30 seconds
-          </label>
-        </fieldset>
+      <div class="flex flex-col grow gap-4">
+        <ul class="quiz__list">
+          <li>
+            <button id="html" class="menu__button" href="#">
+              <img
+                class="quiz__icon quiz__icon--html"
+                src="./assets/images/icon-html.svg"
+              />
+              HTML
+            </button>
+          </li>
+          <li>
+            <button id="css" class="menu__button" href="#">
+              <img
+                class="quiz__icon quiz__icon--css"
+                src="./assets/images/icon-css.svg"
+              />
+              CSS
+            </button>
+          </li>
+          <li>
+            <button id="javascript" class="menu__button" href="#">
+              <img
+                class="quiz__icon quiz__icon--javascript"
+                src="./assets/images/icon-javascript.svg"
+              />
+              JavaScript
+            </button>
+          </li>
+          <li>
+            <button id="accessibility" class="menu__button" href="#">
+              <img
+                class="quiz__icon quiz__icon--accessibility"
+                src="./assets/images/icon-accessibility.svg"
+              />
+              Accessibility
+            </button>
+          </li>
+        </ul>
+        <div>
+          <div
+            class="flex flex-col gap-3 justify-center self-start select-none"
+          >
+            <label
+              for="timerCheck"
+              class="flex gap-2 justify-center items-center hover:cursor-pointer"
+            >
+              <input
+                type="checkbox"
+                name="timerCheck"
+                id="timerCheck"
+                class="appearance-none size-6 border-2 rounded border-gray-navy dark:border-light-bluish hover:cursor-pointer hover:border-purple checked:bg-purple checked:border-purple checked:bg-[url('../assets/images/icon-check.svg')] bg-no-repeat bg-center"
+              />
+              <span class="text-2xl">Play with timer?</span>
+            </label>
+            <fieldset
+              id="timerDuration"
+              class="*:*:hidden flex justify-center gap-2 invisible"
+            >
+              <legend class="sr-only">Select a duration</legend>
+              <label for="duration-10" class="quiz__duration_label">
+                <input
+                  class="quiz__duration"
+                  type="radio"
+                  name="duration"
+                  id="duration-10"
+                  value="10"
+                />
+                10 seconds
+              </label>
+              <label for="duration-20" class="quiz__duration_label">
+                <input
+                  class="quiz__duration"
+                  type="radio"
+                  name="duration"
+                  id="duration-20"
+                  value="20"
+                />
+                20 seconds
+              </label>
+              <label for="duration-30" class="quiz__duration_label">
+                <input
+                  class="quiz__duration"
+                  type="radio"
+                  name="duration"
+                  id="duration-30"
+                  value="30"
+                />
+                30 seconds
+              </label>
+            </fieldset>
+          </div>
+        </div>
       </div>
       <script type="module" src="./js/main.js"></script>
     </main>
 
     <template id="quizTemplate">
-      <div class="grid gap-6">
-        <div class="grid gap-3">
+      <div class="grid gap-6 w-full">
+        <div class="flex-col flex gap-3">
           <p
             id="questionNumber"
             class="text-body-s italic text-gray-navy dark:text-light-bluish"
@@ -194,7 +206,7 @@
           >
         </div>
       </div>
-      <div class="grid gap-7">
+      <div class="grid gap-8 min-w-[576px]">
         <fieldset id="quizOptions">
           <ul class="quiz__list w-full">
             <li>
@@ -235,54 +247,75 @@
             </li>
           </ul>
         </fieldset>
-        <div class="flex flex-col gap-[13px]">
-          <button
-            id="showResultsButton"
-            class="bg-purple text-white p-3 rounded-xl hover:cursor-pointer button-hover hidden"
+        <div class="flex flex-col gap-3 md:gap-8">
+          <div class="flex flex-col gap-[13px]">
+            <button
+              id="showResultsButton"
+              class="bg-purple text-white p-3 rounded-xl hover:cursor-pointer button-hover hidden"
+            >
+              Show Results
+            </button>
+            <button
+              id="nextQuestionButton"
+              class="bg-purple text-white p-3 rounded-xl hover:cursor-pointer button-hover hidden"
+            >
+              Next Question
+            </button>
+            <button
+              id="submitAnswerButton"
+              class="bg-purple text-white p-3 rounded-xl hover:cursor-pointer button-hover"
+            >
+              Submit Answer
+            </button>
+            <button
+              id="retryButton"
+              class="bg-gray-navy text-white p-3 rounded-xl hover:cursor-pointer button-hover hidden"
+            >
+              Retry
+            </button>
+          </div>
+          <div
+            id="noSelectedAnswerMessage"
+            class="text-red text-body-m flex items-center justify-center gap-[2px] hidden"
           >
-            Show Results
-          </button>
-          <button
-            id="nextQuestionButton"
-            class="bg-purple text-white p-3 rounded-xl hover:cursor-pointer button-hover hidden"
-          >
-            Next Question
-          </button>
-          <button
-            id="submitAnswerButton"
-            class="bg-purple text-white p-3 rounded-xl hover:cursor-pointer button-hover"
-          >
-            Submit Answer
-          </button>
-          <button
-            id="retryButton"
-            class="bg-gray-navy text-white p-3 rounded-xl hover:cursor-pointer button-hover"
-          >
-            Retry
-          </button>
+            <img class="size-6 mt-1" src="./assets/images/icon-error.svg" />
+            <span>Please select an answer</span>
+          </div>
         </div>
       </div>
     </template>
 
     <template id="resultsTemplate">
-      <div class="text-heading-l">
-         <h2 class="font-light">Quiz Completed</h2>
-         <p>You scored...</p>
+      <div class="text-heading-l flex flex-col grow">
+        <h2 class="font-light">Quiz Completed</h2>
+        <p>You scored...</p>
       </div>
-      <div class="flex flex-col gap-6 p-8 md:p-12 rounded-xl md:rounded-3xl bg-pure-white dark:bg-navy">
-        <div class="flex justify-center text-center items-center gap-4">
-          <img class="quiz__icon" src="./assets/images/icon-accessibility.svg">
-          <h2 id="quizTitleResults" class="text-heading-m">Accessibility</h2>
+      <div class="flex flex-col grow gap-3 md:gap-8">
+        <div
+          class="flex flex-col grow gap-6 p-8 md:p-12 rounded-xl md:rounded-3xl bg-pure-white dark:bg-navy"
+        >
+          <div class="flex justify-center text-center items-center gap-4">
+            <img
+              class="quiz__icon"
+              src="./assets/images/icon-accessibility.svg"
+            />
+            <h2 id="quizTitleResults" class="text-heading-m">Accessibility</h2>
+          </div>
+
+          <div class="grid justify-center items-center text-center">
+            <p id="scoreDisplay" class="text-display">8</p>
+            <p class="text-body-m text-gray-navy dark:text-light-bluish">
+              out of 10
+            </p>
+          </div>
         </div>
-        
-        <div class="grid justify-center items-center text-center">
-          <p id="scoreDisplay" class="text-display">8</p>
-          <p class="text-body-m text-gray-navy dark:text-light-bluish">out of 10</p>
-        </div>
+        <button
+          id="playAgainButton"
+          class="bg-purple text-white p-3 rounded-xl hover:cursor-pointer button-hover"
+        >
+          Play again
+        </button>
       </div>
-      <button id="playAgainButton" class="bg-purple text-white p-3 rounded-xl hover:cursor-pointer button-hover">
-        Play again
-      </button>
     </template>
   </body>
 </html>

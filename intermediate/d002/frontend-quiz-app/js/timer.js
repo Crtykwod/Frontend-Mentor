@@ -20,7 +20,8 @@ export const setTimer = () => {
 export const setTimesUpEvent = () => {
   if (!state.timerDuration) return;
   setTimeout(() => {
-    quizElements.timesUpMessage.classList.toggle("hidden");
+    quizElements.timesUpMessage.classList.remove("hidden");
     quizElements.quizOptions.disabled = true;
+    quizElements.retryButton.classList.remove("hidden");
   }, state.timerDuration * 1000);
 }

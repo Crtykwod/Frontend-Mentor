@@ -17,6 +17,25 @@
 :root {
   --animate-timer-duration: 20s;
   --animate-timer-playstate: paused;
+  --timer-initial-width: 95%;
+}
+
+@media (min-width: 30rem) {
+  :root {
+    --timer-initial-width: 96%;
+  }
+}
+
+@media (min-width: 40rem) {
+  :root {
+    --timer-initial-width: 97%;
+  }
+}
+
+@media (min-width: 48rem) {
+  :root {
+    --timer-initial-width: 98%;
+  }
 }
 
 @theme {
@@ -42,18 +61,20 @@
   --text-body-s: clamp(0.875rem, 0.7124rem + 0.6936vw, 1.25rem);
   --text-body-s--line-height: 150%;
   /* Animations: */
-  --animate-timer: timer var(--animate-timer-duration) linear forwards var(--animate-timer-playstate);
+  --animate-timer: timer var(--animate-timer-duration) linear forwards
+    var(--animate-timer-playstate);
 
   @keyframes timer {
     from {
-      width: 95%;
+      width: var(--timer-initial-width);
     }
     to {
       width: 0;
     }
   }
 
-  --animate-scale-up-center: scale-up-center 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000);
+  --animate-scale-up-center: scale-up-center 0.5s
+    cubic-bezier(0.39, 0.575, 0.565, 1);
 
   @keyframes scale-up-center {
     0% {
@@ -135,7 +156,8 @@
     @apply flex flex-col gap-3.25;
   }
 
-  .quiz__button, .menu__button {
+  .quiz__button,
+  .menu__button {
     @apply flex items-center gap-4 p-3 w-full rounded-xl hover:cursor-pointer relative text-heading-s select-none
       bg-pure-white 
       dark:bg-navy
@@ -157,10 +179,10 @@
         @apply bg-[#F6E7FF] text-purple;
       }
     }
-    
+
     &:has(input:checked) {
       @apply outline-[3px] outline-purple;
-      
+
       .quiz__icon--letter {
         @apply bg-purple text-pure-white;
       }
@@ -168,7 +190,7 @@
 
     &&:has(#isCorrect) {
       @apply outline-[3px] outline-green;
-        
+
       .quiz__icon--letter {
         @apply bg-green text-pure-white;
       }
@@ -176,7 +198,7 @@
 
     &&:has(#isIncorrect) {
       @apply outline-[3px] outline-red;
-      
+
       &::after {
         content: "";
         width: clamp(1.5rem, 1.1422rem + 1.5267vw, 1.875rem);
@@ -185,12 +207,12 @@
         top: 50%;
         right: 1rem;
         transform: translateY(-50%);
-  
+
         background-image: url("../assets/images/icon-incorrect.svg");
         background-size: contain;
         background-repeat: no-repeat;
       }
-  
+
       &::before {
         content: "";
         width: 80px;
@@ -200,7 +222,7 @@
         top: 0;
         right: 0;
         mask: linear-gradient(to left, black 50%, transparent);
-        background: var(--color-pure-white);   
+        background: var(--color-pure-white);
       }
 
       [data-theme="dark"] &::before {
@@ -212,7 +234,7 @@
       }
     }
   }
-  
+
   .quiz__answer--correct {
     @apply before:hidden after:hidden;
 
@@ -239,7 +261,7 @@
       top: 0;
       right: 0;
       mask: linear-gradient(to left, black 50%, transparent);
-      background: var(--color-pure-white);      
+      background: var(--color-pure-white);
     }
 
     [data-theme="dark"] &::before {
@@ -280,6 +302,6 @@
   }
 
   .button-hover {
-    @apply hover:inset-shadow-[0_0_999px_999px_hsla(0,0%,100%,0.5)] active:inset-shadow-[0_0_999px_999px_hsla(0,0%,100%,0.5)]
+    @apply hover:inset-shadow-[0_0_999px_999px_hsla(0,0%,100%,0.5)] active:inset-shadow-[0_0_999px_999px_hsla(0,0%,100%,0.5)];
   }
 }

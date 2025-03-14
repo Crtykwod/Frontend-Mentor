@@ -21,15 +21,16 @@ export const quizElements = {
   submitAnswerButton: HTMLElement,
   retryButton: HTMLElement,
   nextQuestionButton: HTMLElement,
-  showResultsButton: HTMLElement
-}
+  showResultsButton: HTMLElement,
+  noSelectedAnswerMessage: HTMLElement,
+};
 
 export const resultsElements = {
   scoreDisplay: HTMLElement,
   playAgainButton: HTMLElement,
   quizIcon: HTMLElement,
-  quizTitleResults: HTMLElement
-}
+  quizTitleResults: HTMLElement,
+};
 
 export const updateElementReferences = () => {
   const main = elements.main;

@@ -1,3 +1,3 @@
-import { setupEventListeners } from "./events.js";
+import {setupEventListeners} from "./events.js";
 
 setupEventListeners();
