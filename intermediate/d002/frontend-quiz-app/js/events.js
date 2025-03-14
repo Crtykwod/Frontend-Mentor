@@ -16,6 +16,7 @@ export const setupEventListeners = () => {
       "invisible",
       !elements.timerCheck.checked
     );
+    setTimer();
     if (!elements.timerCheck.checked) {
       state.timerDuration = 0;
       elements.durationInputs.forEach((duration) => (duration.checked = false));

@@ -465,6 +465,18 @@
   .self-start {
     align-self: flex-start;
   }
+  .overflow-x-auto {
+    overflow-x: auto;
+  }
+  .overflow-x-clip {
+    overflow-x: clip;
+  }
+  .overflow-y-auto {
+    overflow-y: auto;
+  }
+  .overflow-y-clip {
+    overflow-y: clip;
+  }
   .rounded {
     border-radius: 0.25rem;
   }
@@ -891,6 +903,11 @@
   .md\:max-w-\[45\.75rem\] {
     @media (width >= 48rem) {
       max-width: 45.75rem;
+    }
+  }
+  .md\:min-w-\[576px\] {
+    @media (width >= 48rem) {
+      min-width: 576px;
     }
   }
   .md\:grid-cols-\[1\.34fr_2fr\] {

@@ -3,6 +3,7 @@ import {setupEventListeners} from "./events.js";
 import {getQuizData, quizTypes} from "./quiz-data.js";
 import {renderQuiz} from "./quiz-renderer.js";
 import {state} from "./state.js";
+import { initTimer } from "./timer.js";
 
 const updateHeader = () => {
   if (!state.currentQuiz) {
@@ -125,4 +126,5 @@ export const restoreMainMenu = () => {
 
   updateElementReferences();
   setupEventListeners();
+  initTimer();
 };
