@@ -14,7 +14,7 @@
   </head>
 
   <body
-    class="bg-light-gray dark:bg-dark-navy text-dark-navy dark:text-light-gray font-[501] body-background min-h-[100svh] text-heading-s flex flex-col"
+    class="bg-light-gray dark:bg-dark-navy text-dark-navy dark:text-light-gray font-medium body-background min-h-[100svh] text-heading-s flex flex-col"
   >
     <header id="header" class="px-6 py-4 flex justify-between h-fit">
       <div id="headerContent" class="flex items-center gap-4 invisible">
@@ -83,10 +83,10 @@
           Pick a subject to get started.
         </p>
       </div>
-      <div class="flex flex-col grow gap-4">
+      <div class="flex flex-col grow gap-4 md:gap-7">
         <ul class="quiz__list">
           <li>
-            <button id="html" class="menu__button" href="#">
+            <button id="html" class="menu__button">
               <img
                 class="quiz__icon quiz__icon--html"
                 src="./assets/images/icon-html.svg"
@@ -95,7 +95,7 @@
             </button>
           </li>
           <li>
-            <button id="css" class="menu__button" href="#">
+            <button id="css" class="menu__button">
               <img
                 class="quiz__icon quiz__icon--css"
                 src="./assets/images/icon-css.svg"
@@ -104,7 +104,7 @@
             </button>
           </li>
           <li>
-            <button id="javascript" class="menu__button" href="#">
+            <button id="javascript" class="menu__button">
               <img
                 class="quiz__icon quiz__icon--javascript"
                 src="./assets/images/icon-javascript.svg"
@@ -113,7 +113,7 @@
             </button>
           </li>
           <li>
-            <button id="accessibility" class="menu__button" href="#">
+            <button id="accessibility" class="menu__button">
               <img
                 class="quiz__icon quiz__icon--accessibility"
                 src="./assets/images/icon-accessibility.svg"
@@ -181,7 +181,7 @@
     </main>
 
     <template id="quizTemplate">
-      <div class="grid gap-6 w-full">
+      <div class="flex flex-col justify-between w-full max-h-1/2 mb-36">
         <div class="flex-col flex gap-3">
           <p
             id="questionNumber"
@@ -251,25 +251,25 @@
           <div class="flex flex-col gap-[13px]">
             <button
               id="showResultsButton"
-              class="bg-purple text-white p-3 rounded-xl hover:cursor-pointer button-hover hidden"
+              class="bg-purple text-white p-3 md:p-7 rounded-xl md:rounded-3xl hover:cursor-pointer button-hover hidden"
             >
               Show Results
             </button>
             <button
               id="nextQuestionButton"
-              class="bg-purple text-white p-3 rounded-xl hover:cursor-pointer button-hover hidden"
+              class="bg-purple text-white p-3 sm:p-7 rounded-xl md:rounded-3xl hover:cursor-pointer button-hover hidden"
             >
               Next Question
             </button>
             <button
               id="submitAnswerButton"
-              class="bg-purple text-white p-3 rounded-xl hover:cursor-pointer button-hover"
+              class="bg-purple text-white p-3 md:p-7 rounded-xl md:rounded-3xl hover:cursor-pointer button-hover"
             >
               Submit Answer
             </button>
             <button
               id="retryButton"
-              class="bg-gray-navy text-white p-3 rounded-xl hover:cursor-pointer button-hover hidden"
+              class="bg-gray-navy text-white p-3 md:p-7 rounded-xl md:rounded-3xl hover:cursor-pointer button-hover hidden"
             >
               Retry
             </button>
@@ -311,7 +311,7 @@
         </div>
         <button
           id="playAgainButton"
-          class="bg-purple text-white p-3 rounded-xl hover:cursor-pointer button-hover"
+          class="bg-purple text-white p-3 md:p-8 rounded-xl md:rounded-3xl hover:cursor-pointer button-hover"
         >
           Play again
         </button>

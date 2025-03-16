@@ -153,12 +153,12 @@
   }
 
   .quiz__list {
-    @apply flex flex-col gap-3.25;
+    @apply flex flex-col gap-3.25 md:gap-6;
   }
 
   .quiz__button,
   .menu__button {
-    @apply flex items-center gap-4 p-3 w-full rounded-xl hover:cursor-pointer relative text-heading-s select-none
+    @apply flex items-center gap-4 sm:gap-8 p-5 w-full rounded-xl sm:rounded-3xl hover:cursor-pointer relative text-heading-s select-none
       bg-pure-white 
       dark:bg-navy
       dark:text-white
@@ -274,7 +274,7 @@
   }
 
   .quiz__icon--letter {
-    @apply bg-light-gray flex justify-center items-center text-gray-navy text-lg;
+    @apply bg-light-gray flex justify-center items-center text-gray-navy text-heading-s;
   }
 
   .quiz__icon--html {
