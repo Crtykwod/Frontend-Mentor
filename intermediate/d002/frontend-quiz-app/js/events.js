@@ -6,9 +6,11 @@ import {setTimer} from "./timer.js";
 
 export const setupEventListeners = () => {
   elements.returnToMenuButton.addEventListener("click", restoreMainMenu);
+
   document
     .querySelector(".quiz__list")
     .addEventListener("click", handleQuizSelection);
+
   themeSwitchButton.addEventListener("change", changeTheme);
 
   elements.timerCheck.addEventListener("change", () => {

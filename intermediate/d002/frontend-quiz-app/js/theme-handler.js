@@ -1,4 +1,4 @@
-const theme = localStorage.getItem("theme");
+export const theme = localStorage.getItem("theme");
 if (theme) document.documentElement.dataset.theme = theme;
 
 export const themeSwitchButton = document.getElementById("themeSwitchBtn");

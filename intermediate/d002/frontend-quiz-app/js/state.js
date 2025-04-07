@@ -5,6 +5,7 @@ export const state = {
   currentQuiz: null,
   currentQuestion: 1,
   timerDuration: 0,
+  timerTimeout: false,
   score: 0,
   selectedButton: null,
   selectedAnswer: null,

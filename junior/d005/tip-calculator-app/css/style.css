@@ -63,6 +63,7 @@ main {
 }
 
 .calculator__label, .calculator__legend {
+  text-align: left;
   display: flex;
   margin-bottom: .375rem;
 }
@@ -191,7 +192,7 @@ input[type="radio"] {
   box-shadow: inset 999px 999px 0px 0px #ffffff5e;
 }
 
-.error, .error::placeholder, .error:hover, .error:focus {
+.error, .error:hover, .error:focus {
   border: 3px solid #E17457 !important;
   outline: none !important;
   position: relative;

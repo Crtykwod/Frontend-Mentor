@@ -560,6 +560,9 @@
   .p-3 {
     padding: calc(var(--spacing) * 3);
   }
+  .p-4 {
+    padding: calc(var(--spacing) * 4);
+  }
   .p-5 {
     padding: calc(var(--spacing) * 5);
   }
@@ -1095,8 +1098,8 @@
   .switch {
     position: relative;
     display: inline-block;
-    width: 32px;
-    height: 20px;
+    width: 3rem;
+    height: 1.5rem;
     border-radius: 50px;
     input {
       opacity: 0;
@@ -1117,8 +1120,8 @@
       &:before {
         position: absolute;
         content: "";
-        width: 12px;
-        height: 12px;
+        width: 16px;
+        height: 16px;
         left: 4px;
         bottom: 4px;
         border-radius: 50%;
@@ -1127,7 +1130,7 @@
       }
     }
     input:checked + .slider:before {
-      transform: translateX(11px);
+      transform: translateX(22px);
     }
   }
   .quiz__list {
@@ -1244,6 +1247,7 @@
         height: 100%;
         border-radius: 0 13px 13px 0;
         position: absolute;
+        border-radius: 100%;
         top: 0;
         right: 0;
         -webkit-mask: linear-gradient(to left, black 50%, transparent);
@@ -1284,7 +1288,7 @@
       content: "";
       width: 80px;
       height: 100%;
-      border-radius: 0 13px 13px 0;
+      border-radius: 100%;
       position: absolute;
       top: 0;
       right: 0;

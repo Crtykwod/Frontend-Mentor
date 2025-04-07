@@ -47,11 +47,13 @@ export const setTimer = () => {
 
 export const setTimesUpEvent = () => {
   if (!state.timerDuration) return;
-  setTimeout(() => {
-    quizElements.timesUpMessage.classList.remove("hidden");
-    quizElements.quizOptions.disabled = true;
-    quizElements.retryButton.classList.remove("hidden");
-  }, state.timerDuration * 1000);
+  clearTimeout(state.timerTimeout)
+  state.timerTimeout =
+    setTimeout(() => {
+      quizElements.timesUpMessage.classList.remove("hidden");
+      quizElements.quizOptions.disabled = true;
+      quizElements.retryButton.classList.remove("hidden");
+    }, state.timerDuration * 1000);
 }
 
 export const initTimer = () => {
